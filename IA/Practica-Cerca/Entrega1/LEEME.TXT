@@ -1,0 +1,12 @@
+
+EXECUCIÓ DEL PROGRAMA
+-------------------------------------------------
+
+La pràctica està feta amb Netbeans.
+Es pot obrir el projecte que es troba dins del
+ZIP amb el codi font. En cas de no voler compilar
+es pot executar la pràctica directament fent ús
+del contingut del directori executable.
+
+java -jar ProjecteCerca.jar
+

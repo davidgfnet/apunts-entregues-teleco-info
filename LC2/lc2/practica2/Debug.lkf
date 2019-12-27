@@ -1,0 +1,7 @@
+-z -q -c -m"./Debug/Loop_intr.map" -o"./Debug/Loop_intr.out" -x -i"C:/CCStudio_v3.1/C6000/rtdx/lib" -i"C:/CCStudio_v3.1/C6000/csl/lib" -i"C:/CCStudio_v3.1/C6000/xdais/lib" -i"C:/CCStudio_v3.1/C6000/bios/lib" -i"C:/CCStudio_v3.1/C6000/cgtools/lib" -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib"
+"C:\Documents and Settings\lc2125\Escritorio\practica2\Debug\c6713dskinit.obj"
+"C:\Documents and Settings\lc2125\Escritorio\practica2\Debug\codec.obj"
+"C:\Documents and Settings\lc2125\Escritorio\practica2\Debug\prac2.obj"
+"C:\Documents and Settings\lc2125\Escritorio\practica2\Debug\Vectors_intr.obj"
+"C:\Documents and Settings\lc2125\Escritorio\practica2\dsk6713bsl.lib"
+"C:\Documents and Settings\lc2125\Escritorio\practica2\C6713dsk.cmd"

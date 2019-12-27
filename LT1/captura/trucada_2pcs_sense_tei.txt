@@ -1,0 +1,726 @@
+(LN) 1        12:54:06.0000000    Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+ Record #1       (LN) Captured on 05.20.10 at 12:54:06.000000000 Length =   120
+Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+(EQ) 2        12:54:06.0000000    Line Status: Info State: INFO-3   
+ Record #2       (EQ) Captured on 05.20.10 at 12:54:06.000000000 Length =   120
+Line Status: Info State: INFO-3   
+(EQ) 3        12:54:06.0000000    Line Status: Info State: INFO-3   
+ Record #3       (EQ) Captured on 05.20.10 at 12:54:06.000000000 Length =   120
+Line Status: Info State: INFO-3   
+(EQ) 4        12:54:23.0358163    LAPD: SAPI=63(TEI Management) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+ Record #4       (EQ) Captured on 05.20.10 at 12:54:23.035816300 Length =    10
+LAPD:
+  Address Information = 0xFCFF
+    1111 11..  .... .... SAPI = 63 (TEI Management)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1111 111. TEI = 127 (Broadcast)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x03 (UI)
+  Poll/Final          = 0 (Not Poll)
+  Mgmt. Entity Id     = 15
+  Reference Number    = 38739
+  Mgmt. Message Type  = 1 (Identity request)
+  Action Indicator    = 127
+  FCS                 = 0x67-d0 (Good)
+(LN) 5        12:54:23.0698725    LAPD: SAPI=63(TEI Management) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+ Record #5       (LN) Captured on 05.20.10 at 12:54:23.069872500 Length =    10
+LAPD:
+  Address Information = 0xFEFF
+    1111 11..  .... .... SAPI = 63 (TEI Management)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1111 111. TEI = 127 (Broadcast)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x03 (UI)
+  Poll/Final          = 0 (Not Poll)
+  Mgmt. Entity Id     = 15
+  Reference Number    = 38739
+  Mgmt. Message Type  = 2 (Identity assigned)
+  Action Indicator    = 68
+  FCS                 = 0xd1-e7 (Good)
+(EQ) 6        12:54:23.0763150    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=SABME P=1 FCS=Good
+ Record #6       (EQ) Captured on 05.20.10 at 12:54:23.076315000 Length =     5
+LAPD:
+  Address Information = 0x0089
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x7f (SABME)
+  Poll/Final          = 1 (Poll)
+  FCS                 = 0x68-16 (Good)
+(LN) 7        12:54:23.0979902    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=UA    F=1 FCS=Good
+ Record #7       (LN) Captured on 05.20.10 at 12:54:23.097990200 Length =     5
+LAPD:
+  Address Information = 0x0089
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x73 (UA)
+  Poll/Final          = 1 (Final)
+  FCS                 = 0x04-dc (Good)
+(EQ) 8        12:54:23.1016931    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=000 Nr=000 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x06; Type =    SETUP
+ Record #8       (EQ) Captured on 05.20.10 at 12:54:23.101693100 Length =    33
+LAPD:
+  Address Information = 0x0089
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x00 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 000
+  N(r)                = 000
+  FCS                 = 0x17-8f (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 0 (FROM side that originated call ref)
+  Call Reference Value        = 0x06
+  Message Type                = SETUP (0x05)
+  Information Element         = Bearer Capability (0x04)
+  Information Element Length  = 3 
+    Coding Std                = CCITT
+    Info Trans Cap            = 3.1 KHz Audio
+    Transfer Mode             = Circuit
+    Transfer Rate             = 64 Kbit/s
+    Layer Id                  = Layer 1
+    Lay 1 Prot                = G.711 A-law
+  Information Element         = Channel Identification (0x18)
+  Information Element Length  = 1 
+    Interface Id Present      = Implicit
+    Interface Type            = Basic
+    Channel                   = Preferred
+    D-channel                 = No
+    Info Chan Selection       = Any
+  Information Element         = Progress Indicator (0x1e)
+  Information Element Length  = 2 
+    Coding Std                = CCITT
+    Locat                     = User
+    Prog Desc                 = Orig Addr Non-ISDN
+  Information Element         = Calling Party Number (0x6c)
+  Information Element Length  = 4 
+    Number Type               = Unknown
+    Number Plan               = Unknown
+    Presentation              = Allowed
+    Screening                 = User Prov Unscreened
+    Number Digits             = 42
+  Information Element         = Called Party Number (0x70)
+  Information Element Length  = 3 
+    Number Type               = Unknown
+    Number Plan               = Unknown
+    Number digits             = 41
+(LN) 9        12:54:23.1349909    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=001 FCS=Good
+ Record #9       (LN) Captured on 05.20.10 at 12:54:23.134990900 Length =     6
+LAPD:
+  Address Information = 0x0089
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 001
+  FCS                 = 0xe6-56 (Good)
+(LN) 10       12:54:23.2319889    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=000 Nr=001 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x06; Type = CALL PROC
+ Record #10      (LN) Captured on 05.20.10 at 12:54:23.231988900 Length =    13
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x00 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 000
+  N(r)                = 001
+  FCS                 = 0x5b-59 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x06
+  Message Type                = CALL PROC (0x02)
+  Information Element         = Channel Identification (0x18)
+  Information Element Length  = 1 
+    Interface Id Present      = Implicit
+    Interface Type            = Basic
+    Channel                   = Exclusive
+    D-channel                 = No
+    Info Chan Selection       = B1
+(EQ) 11       12:54:23.2398098    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=001 FCS=Good
+ Record #11      (EQ) Captured on 05.20.10 at 12:54:23.239809800 Length =     6
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 001
+  FCS                 = 0x90-6f (Good)
+(LN) 12       12:54:23.2401140    LAPD: SAPI=0 (Call Control) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2a; Type =    SETUP
+ Record #12      (LN) Captured on 05.20.10 at 12:54:23.240114000 Length =    43
+LAPD:
+  Address Information = 0x02FF
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1111 111. TEI = 127 (Broadcast)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x03 (UI)
+  Poll/Final          = 0 (Not Poll)
+  FCS                 = 0x14-c9 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 0 (FROM side that originated call ref)
+  Call Reference Value        = 0x2a
+  Message Type                = SETUP (0x05)
+  Information Element         = Sending Complete (0xa1)
+  Information Element         = Bearer Capability (0x04)
+  Information Element Length  = 3 
+    Coding Std                = CCITT
+    Info Trans Cap            = 3.1 KHz Audio
+    Transfer Mode             = Circuit
+    Transfer Rate             = 64 Kbit/s
+    Layer Id                  = Layer 1
+    Lay 1 Prot                = G.711 A-law
+  Information Element         = Channel Identification (0x18)
+  Information Element Length  = 1 
+    Interface Id Present      = Implicit
+    Interface Type            = Basic
+    Channel                   = Exclusive
+    D-channel                 = No
+    Info Chan Selection       = B2
+  Information Element         = Progress Indicator (0x1e)
+  Information Element Length  = 2 
+    Coding Std                = CCITT
+    Locat                     = User
+    Prog Desc                 = Orig Addr Non-ISDN
+  Information Element         = Calling Party Number (0x6c)
+  Information Element Length  = 3 
+    Number Type               = Unknown
+    Number Plan               = Unknown
+    Number Digits             = 42
+  Information Element         = Called Party Number (0x70)
+  Information Element Length  = 3 
+    Number Type               = Unknown
+    Number Plan               = Unknown
+    Number digits             = 41
+  Information Element         = User-User (0x7e)
+  Information Element Length  = 9 
+    Proto Discrim             = IA5 Chars
+    User Information          = INTERIOR
+(EQ) 13       12:54:23.2884332    LAPD: SAPI=63(TEI Management) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+ Record #13      (EQ) Captured on 05.20.10 at 12:54:23.288433200 Length =    10
+LAPD:
+  Address Information = 0xFCFF
+    1111 11..  .... .... SAPI = 63 (TEI Management)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1111 111. TEI = 127 (Broadcast)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x03 (UI)
+  Poll/Final          = 0 (Not Poll)
+  Mgmt. Entity Id     = 15
+  Reference Number    = 22368
+  Mgmt. Message Type  = 1 (Identity request)
+  Action Indicator    = 127
+  FCS                 = 0x74-82 (Good)
+(LN) 14       12:54:23.3238578    LAPD: SAPI=63(TEI Management) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+ Record #14      (LN) Captured on 05.20.10 at 12:54:23.323857800 Length =    10
+LAPD:
+  Address Information = 0xFEFF
+    1111 11..  .... .... SAPI = 63 (TEI Management)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1111 111. TEI = 127 (Broadcast)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x03 (UI)
+  Poll/Final          = 0 (Not Poll)
+  Mgmt. Entity Id     = 15
+  Reference Number    = 22368
+  Mgmt. Message Type  = 2 (Identity assigned)
+  Action Indicator    = 69
+  FCS                 = 0xd0-96 (Good)
+(EQ) 15       12:54:23.3301858    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=SABME P=1 FCS=Good
+ Record #15      (EQ) Captured on 05.20.10 at 12:54:23.330185800 Length =     5
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x7f (SABME)
+  Poll/Final          = 1 (Poll)
+  FCS                 = 0xd8-25 (Good)
+(LN) 16       12:54:23.3523583    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=UA    F=1 FCS=Good
+ Record #16      (LN) Captured on 05.20.10 at 12:54:23.352358300 Length =     5
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x73 (UA)
+  Poll/Final          = 1 (Final)
+  FCS                 = 0xb4-ef (Good)
+(EQ) 17       12:54:23.3563062    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=Info  P=0 Ns=000 Nr=000 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2a; Type = ALERTing
+ Record #17      (EQ) Captured on 05.20.10 at 12:54:23.356306200 Length =    10
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x00 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 000
+  N(r)                = 000
+  FCS                 = 0xee-8f (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x2a
+  Message Type                = ALERTing (0x01)
+(LN) 18       12:54:23.3788627    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=RR    F=0 Nr=001 FCS=Good
+ Record #18      (LN) Captured on 05.20.10 at 12:54:23.378862700 Length =     6
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 001
+  FCS                 = 0x5e-e3 (Good)
+(LN) 19       12:54:23.4413600    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=001 Nr=001 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x06; Type = ALERTing
+ Record #19      (LN) Captured on 05.20.10 at 12:54:23.441360000 Length =    14
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x02 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 001
+  N(r)                = 001
+  FCS                 = 0x53-22 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x06
+  Message Type                = ALERTing (0x01)
+  Information Element         = Progress Indicator (0x1e)
+  Information Element Length  = 2 
+    Coding Std                = CCITT
+    Locat                     = User
+    Prog Desc                 = In-Band Info Avail
+(EQ) 20       12:54:23.4496820    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=002 FCS=Good
+ Record #20      (EQ) Captured on 05.20.10 at 12:54:23.449682000 Length =     6
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 002
+  FCS                 = 0xa6-0a (Good)
+(EQ) 21       12:54:26.0435993    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=Info  P=0 Ns=001 Nr=000 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2a; Type =  CONNect
+ Record #21      (EQ) Captured on 05.20.10 at 12:54:26.043599300 Length =    10
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x02 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 001
+  N(r)                = 000
+  FCS                 = 0x8e-e2 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x2a
+  Message Type                = CONNect (0x07)
+(LN) 22       12:54:26.0687771    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=RR    F=0 Nr=002 FCS=Good
+ Record #22      (LN) Captured on 05.20.10 at 12:54:26.068777100 Length =     6
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 002
+  FCS                 = 0x68-86 (Good)
+(LN) 23       12:54:26.0837774    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=Info  P=0 Ns=000 Nr=002 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2a; Type = CONN ACK
+ Record #23      (LN) Captured on 05.20.10 at 12:54:26.083777400 Length =    10
+LAPD:
+  Address Information = 0x028B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x00 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 000
+  N(r)                = 002
+  FCS                 = 0x23-cc (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 0 (FROM side that originated call ref)
+  Call Reference Value        = 0x2a
+  Message Type                = CONN ACK (0x0f)
+(EQ) 24       12:54:26.0902190    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=RR    F=0 Nr=001 FCS=Good
+ Record #24      (EQ) Captured on 05.20.10 at 12:54:26.090219000 Length =     6
+LAPD:
+  Address Information = 0x028B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 001
+  FCS                 = 0x28-da (Good)
+(LN) 25       12:54:26.1322744    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=002 Nr=001 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x06; Type =  CONNect
+ Record #25      (LN) Captured on 05.20.10 at 12:54:26.132274400 Length =    14
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x04 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 002
+  N(r)                = 001
+  FCS                 = 0x19-f1 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x06
+  Message Type                = CONNect (0x07)
+  Information Element         = Progress Indicator (0x1e)
+  Information Element Length  = 2 
+    Coding Std                = CCITT
+    Locat                     = User
+    Prog Desc                 = In-Band Info Avail
+(EQ) 26       12:54:26.1407174    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=003 FCS=Good
+ Record #26      (EQ) Captured on 05.20.10 at 12:54:26.140717400 Length =     6
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 003
+  FCS                 = 0xb4-29 (Good)
+(EQ) 27       12:54:26.1452212    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=001 Nr=003 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x06; Type = CONN ACK
+ Record #27      (EQ) Captured on 05.20.10 at 12:54:26.145221200 Length =    10
+LAPD:
+  Address Information = 0x0089
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x02 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 001
+  N(r)                = 003
+  FCS                 = 0xba-64 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 0 (FROM side that originated call ref)
+  Call Reference Value        = 0x06
+  Message Type                = CONN ACK (0x0f)
+(LN) 28       12:54:26.1682712    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=002 FCS=Good
+ Record #28      (LN) Captured on 05.20.10 at 12:54:26.168271200 Length =     6
+LAPD:
+  Address Information = 0x0089
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 002
+  FCS                 = 0xd0-33 (Good)
+(EQ) 29       12:54:27.3660574    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=Info  P=0 Ns=002 Nr=001 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2a; Type = DISConect
+ Record #29      (EQ) Captured on 05.20.10 at 12:54:27.366057400 Length =    14
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x04 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 002
+  N(r)                = 001
+  FCS                 = 0x4c-2f (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x2a
+  Message Type                = DISConect (0x45)
+  Information Element         = Cause (0x08)
+  Information Element Length  = 2 
+    Coding Std                = CCITT
+    Locat                     = User
+    Cause                     = Normal Clearing
+    Cause Decimal Value       = 16
+(LN) 30       12:54:27.3902358    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=RR    F=0 Nr=003 FCS=Good
+ Record #30      (LN) Captured on 05.20.10 at 12:54:27.390235800 Length =     6
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 003
+  FCS                 = 0x7a-a5 (Good)
+(LN) 31       12:54:27.4552331    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=003 Nr=002 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x06; Type = DISConect
+ Record #31      (LN) Captured on 05.20.10 at 12:54:27.455233100 Length =    18
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x06 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 003
+  N(r)                = 002
+  FCS                 = 0x29-79 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x06
+  Message Type                = DISConect (0x45)
+  Information Element         = Cause (0x08)
+  Information Element Length  = 2 
+    Coding Std                = CCITT
+    Locat                     = User
+    Cause                     = Normal Clearing
+    Cause Decimal Value       = 16
+  Information Element         = Progress Indicator (0x1e)
+  Information Element Length  = 2 
+    Coding Std                = CCITT
+    Locat                     = User
+    Prog Desc                 = In-Band Info Avail
+(EQ) 32       12:54:27.4655542    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=004 FCS=Good
+ Record #32      (EQ) Captured on 05.20.10 at 12:54:27.465554200 Length =     6
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 004
+  FCS                 = 0xca-c0 (Good)
+(EQ) 33       12:54:27.4701751    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=002 Nr=004 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x06; Type =  RELease
+ Record #33      (EQ) Captured on 05.20.10 at 12:54:27.470175100 Length =    10
+LAPD:
+  Address Information = 0x0089
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x04 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 002
+  N(r)                = 004
+  FCS                 = 0xee-7c (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 0 (FROM side that originated call ref)
+  Call Reference Value        = 0x06
+  Message Type                = RELease (0x4d)
+(LN) 34       12:54:27.4922299    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=003 FCS=Good
+ Record #34      (LN) Captured on 05.20.10 at 12:54:27.492229900 Length =     6
+LAPD:
+  Address Information = 0x0089
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 003
+  FCS                 = 0xc2-10 (Good)
+(LN) 35       12:54:27.4977300    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=004 Nr=003 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x06; Type =  REL COM
+ Record #35      (LN) Captured on 05.20.10 at 12:54:27.497730000 Length =    10
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x08 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 004
+  N(r)                = 003
+  FCS                 = 0x3f-cf (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x06
+  Message Type                = REL COM (0x5a)
+(EQ) 36       12:54:27.5041740    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=005 FCS=Good
+ Record #36      (EQ) Captured on 05.20.10 at 12:54:27.504174000 Length =     6
+LAPD:
+  Address Information = 0x0289
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 100. TEI = 68  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 005
+  FCS                 = 0xd8-e3 (Good)
+(LN) 37       12:54:27.6533463    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=Info  P=0 Ns=001 Nr=003 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2a; Type =  RELease
+ Record #37      (LN) Captured on 05.20.10 at 12:54:27.653346300 Length =    10
+LAPD:
+  Address Information = 0x028B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x02 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 001
+  N(r)                = 003
+  FCS                 = 0xeb-b3 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 0 (FROM side that originated call ref)
+  Call Reference Value        = 0x2a
+  Message Type                = RELease (0x4d)
+(EQ) 38       12:54:27.6597941    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=RR    F=0 Nr=002 FCS=Good
+ Record #38      (EQ) Captured on 05.20.10 at 12:54:27.659794100 Length =     6
+LAPD:
+  Address Information = 0x028B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..1.  .... .... C/R Bit = 1 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 002
+  FCS                 = 0x1e-bf (Good)
+(EQ) 39       12:54:27.6644189    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=Info  P=0 Ns=003 Nr=002 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2a; Type =  REL COM
+ Record #39      (EQ) Captured on 05.20.10 at 12:54:27.664418900 Length =    10
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Command)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x06 (Information)
+  Poll/Final          = 0 (Not Poll)
+  N(s)                = 003
+  N(r)                = 002
+  FCS                 = 0x52-56 (Good)
+Q.931: CCITT
+  Protocol Discriminator      = 0x08 (Q.931 Call Control)
+  Call Reference Length       = 1 
+  Call Reference Flag         = 1 (TO side that originated call ref)
+  Call Reference Value        = 0x2a
+  Message Type                = REL COM (0x5a)
+(LN) 40       12:54:27.6858508    LAPD: SAPI=0 (Call Control) TEI=69 (Network assigned) Type=RR    F=0 Nr=004 FCS=Good
+ Record #40      (LN) Captured on 05.20.10 at 12:54:27.685850800 Length =     6
+LAPD:
+  Address Information = 0x008B
+    0000 00..  .... .... SAPI = 0  (Call Control)
+    .... ..0.  .... .... C/R Bit = 0 (Response)
+    .... ...0  .... .... EA0 = 0 (FALSE)
+    .... ....  1000 101. TEI = 69  (Network assigned)
+    .... ....  .... ...1 EA1 = 1 (TRUE)
+  Frame Type          = 0x01 (RR)
+  Poll/Final          = 0 (Not Final)
+  N(r)                = 004
+  FCS                 = 0x04-4c (Good)
+(LN) 41       12:54:31.3689871    Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+ Record #41      (LN) Captured on 05.20.10 at 12:54:31.368987100 Length =   120
+Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+(EQ) 42       12:54:31.3689871    Line Status: Info State: INFO-3   
+ Record #42      (EQ) Captured on 05.20.10 at 12:54:31.368987100 Length =   120
+Line Status: Info State: INFO-3   
+(EQ) 43       12:54:31.3689871    Line Status: Info State: INFO-3   
+ Record #43      (EQ) Captured on 05.20.10 at 12:54:31.368987100 Length =   120
+Line Status: Info State: INFO-3   

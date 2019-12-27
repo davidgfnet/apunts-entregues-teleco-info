@@ -1,0 +1,25 @@
+
+
+\begin{document}
+
+%
+% indice
+%
+
+\section{Estudio Previo}
+
+
+
+
+\section{Trabajo de Laboratorio}
+
+\subsection{Montaje del Filtro}
+
+En este apartado construiremos el filtro diseñado en el estudio previo sobre una protoboard y verificaremos su 
+correcto funcionamiento. Para ello lo conectamos al osciloscopio de nuestro puesto de trabajo y le aplicamos una señal de entrada de 1KHz. Vemos que efectivamente, la señal recibida es igual a la transmitida.
+
+Sin embargo, si desdendemos por debajo de los 20Hz, o nos remontamos por encima de los 20kHz, vemos que la señal a la salida está bastante atenuada. Al principió nos pareció poca la atenuación observada, pero si tenemos en cuenta el bajo orden del filtro, no puede esperarse un valor mucho más elevado. Damos por tanto por bueno el diseño y montaje de nuestro filtro paso banda. 
+
+\subsection{Creación de los subVI's para el Generador de Funciones}
+
+Ahora vamos a generar un subVI's que nos permita programar el generador de funciones con una forma de onde senoidal de frecuencia y amplitud variables.

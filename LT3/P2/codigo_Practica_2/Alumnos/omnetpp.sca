@@ -1,0 +1,6 @@
+run 0 "SimPract2"
+scalar "SimPract2.rngGenerator" 	"Random samples.samples" 	100000
+scalar "SimPract2.rngGenerator" 	"Random samples.mean" 	1.99736015821
+scalar "SimPract2.rngGenerator" 	"Random samples.stddev" 	1.9940016777
+scalar "SimPract2.rngGenerator" 	"Random samples.min" 	2.54032181861e-05
+scalar "SimPract2.rngGenerator" 	"Random samples.max" 	26.2198239565

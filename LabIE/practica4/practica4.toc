@@ -1,0 +1,10 @@
+\select@language {catalan}
+\contentsline {section}{\numberline {1}Estudio Previo}{2}{section.1}
+\contentsline {section}{\numberline {2}Trabajo de Laboratorio}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Dise\~no del VI}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Verificaci\'on de medidas y errores}{3}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Verificaci\'on de errores sistem\'aticos}{4}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Verificaci\'on del tipo de conversor AC/DC}{4}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Verificaci\'on de medidas extremas}{4}{subsection.2.5}
+\contentsline {section}{\numberline {3}Trabajo Opcional}{4}{section.3}
+\contentsline {subsection}{\numberline {3.1}Implementaci\'on de un sistema de barrido de frecuencias}{4}{subsection.3.1}

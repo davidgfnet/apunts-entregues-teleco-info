@@ -1,0 +1,190 @@
+# GDBtk Init file
+# GDBtkInitVersion: 1
+[global]
+	font/bold=-family courier -size 12 -weight bold
+	font/default=-family courier -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	font/menu=-family helvetica -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	font/status=-family helvetica -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	font/fixed=-family courier -size 11 -weight normal -slant roman -underline 0 -overstrike 0
+	font/italic=-family courier -size 12 -slant italic
+[gdb]
+	font_cache={ar pl shanheisun uni} {ar pl zenkai uni} {baekmuk batang} {baekmuk dotum} {baekmuk gulim} {baekmuk headline} batang clean courier {courier 10 pitch} dotum fixed fxd gothic gulim lucidatypewriter marumoji mincho ming nil {nimbus mono l} {sazanami gothic} {sazanami mincho} terminal
+	main_names=main MAIN___ MAIN__ cyg_user_start cyg_start
+	compat=GNOME
+	use_icons=1
+	B1_behavior=1
+	recent-projects=/home/david/UPC/PRED/prac2/prac2.exe /home/david/circuitos/gnucap/simula /home/david/game/game /home/david/UPC/PRED/prac.exe /home/david/circuitos/main
+	use_color_schemes=1
+	ImageDir=images2
+	mode=0
+	control_target=1
+[load]
+	main=1
+	verbose=0
+	baud=38400
+	exit=1
+	port=/dev/ttyS0
+	check=0
+	bp_at_func=0
+[console]
+	wrap=0
+	prompt=(gdb) 
+	prompt_fg=DarkGreen
+	log_fg=green
+	font=global/fixed
+	target_fg=blue
+	error_fg=red
+	deleteLeft=1
+[src]
+	tab_size=8
+	run_attach=0
+	trace_fg=magenta
+	thread_fg=pink
+	font=global/fixed
+	top_control=1
+	bp_fg=red
+	run_run=1
+	run_cont=0
+	source2_fg=navy
+	break_fg=black
+	handlebg=red
+	disabled_fg=black
+	run_load=0
+	temp_bp_fg=orange
+	disassembly-flavor=att
+	PC_TAG=green
+	variableBalloons=1
+	STACK_TAG=gold
+	BROWSE_TAG=#9595e2
+	linenums=1
+[reg]
+	rows=16
+[stack]
+	font=global/fixed
+[locals]
+[watch]
+[bp]
+	show_threads=0
+[search]
+	filter_mode=starts with
+[process]
+[geometry]
+	.localswin0.localswin=731x651+543+25
+	.watchwin0.watchwin=786x667+528+39
+	.srcwin0.srcwin=1270x689+0+24
+	.console0.console=752x368+225+251
+	.bpwin0.bpwin=350x165+0+0
+[help]
+[browser]
+	layout=2
+	hide_h=0
+[kod]
+	show_icon=0
+[window]
+	active={ManagedWin::open WatchWin} {ManagedWin::open SrcWin}
+[session]
+	/home/david/UPC/PRED/prac.exe/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/david/circuitos/main/bg=0
+	/home/david/gba/gba_project/make_bg/pwd=/home/david/gba/gba_project
+	/home/david/circuitos/gnucap/simula/bg=0
+	/home/david/UPC/PRED/prac.exe/run_attach=0
+	/home/david/circuitos/gnucap/simula/run_run=1
+	/home/david/circuitos/gnucap/simula/dirs=$cdir:$cwd
+	/home/david/circuitos/gnucap/simula/pwd=/home/david/circuitos/gnucap
+	/home/david/game/game/run_run=1
+	/home/david/Escritorio/jose/jose_practica/prap/run_run=1
+	/home/david/game/game/run_load=0
+	/home/david/Escritorio/jose/jose_practica/prap/run_load=0
+	/home/david/gba/gba_project/make_bg/run_attach=0
+	/home/david/UPC/PRED/prac.exe/run_run=1
+	/home/david/circuitos/main/run_cont=0
+	/home/david/UPC/PRED/prac2/prac2.exe/bg=0
+	/home/david/game/game/bg=0
+	/home/david/Escritorio/jose/jose_practica/prap/bg=0
+	/home/david/UPC/PRED/prac.exe/pwd=/home/david/UPC/PRED
+	/home/david/circuitos/main/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/david/UPC/PRED/prac.exe/run_load=0
+	/home/david/gba/gba_project/make_bg/run_cont=0
+	/home/david/gba/gba_project/make_bg/run_run=1
+	/home/david/circuitos/gnucap/simula/args=david.cir ETIQUETA 8 1 1000 1
+	/home/david/circuitos/main/breakpoints={{break main.cc:86} 1 {} {}} {{break main} 1 {} {}}
+	/home/david/UPC/PRED/prac2/prac2.exe/pwd=/home/david/UPC/PRED/prac2
+	/home/david/gba/gba_project/make_bg/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/david/UPC/PRED/prac.exe/breakpoints={{break ListaPares.cpp:79} 0 {} {}} {{break main.cpp:66} 0 {} {}} {{break ListaPares.cpp:65} 0 {} {}} {{break ListaPares.cpp:65} 0 {} {}} {{break main.cpp:72} 0 {} {}} {{break main.cpp:72} 0 {} {}} {{break ListaPares.cpp:170} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:86} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break ListaPares.cpp:89} 0 {} {}} {{break main.cpp:35} 1 {} {}} {{break main.cpp:93} 1 {} {}} {{break main.cpp:93} 1 {} {}} {{break ListaPares.cpp:211} 1 {} {}} {{break ListaPares.cpp:211} 1 {} {}} {{break ListaPares.cpp:183} 1 {} {}} {{break main.cpp:85} 1 {} {}} {{break main.cpp:86} 1 {} {}} {{break main.cpp:49} 1 {} {}} {{break main.cpp:50} 1 {} {}} {{break main.cpp:51} 1 {} {}} {{break main.cpp:46} 1 {} {}} {{break main} 1 {} {}}
+	/home/david/game/game/executable=/home/david/game/game
+	/home/david/Escritorio/jose/jose_practica/prap/executable=/home/david/Escritorio/jose/jose_practica/prap
+	/home/david/UPC/PRED/prac2/prac2.exe/run_cont=0
+	/home/david/circuitos/gnucap/simula/executable=/home/david/circuitos/gnucap/simula
+	/home/david/circuitos/gnucap/simula/breakpoints={{break main} 0 {} {}} {{break main.cc:79} 0 {} {}} {{break main.cc:85} 0 {} {}} {{break main.cc:91} 1 {} {}}
+	/home/david/UPC/PRED/prac2/prac2.exe/dirs=$cdir:$cwd
+	/home/david/UPC/PRED/prac2/prac2.exe/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/david/circuitos/gnucap/simula/run_cont=0
+	/home/david/circuitos/main/run_load=0
+	/home/david/gba/gba_project/make_bg/dirs=$cdir:$cwd
+	/home/david/UPC/PRED/prac.exe/dirs=$cdir:$cwd
+	/home/david/UPC/PRED/prac2/prac2.exe/executable=/home/david/UPC/PRED/prac2/prac2.exe
+	/home/david/circuitos/main/dirs=$cdir:$cwd
+	/home/david/circuitos/gnucap/simula/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/david/UPC/PRED/prac.exe/bg=0
+	/home/david/gba/gba_project/make_bg/run_load=0
+	/home/david/circuitos/main/executable=/home/david/circuitos/main
+	/home/david/game/game/run_attach=0
+	/home/david/Escritorio/jose/jose_practica/prap/run_attach=0
+	/home/david/circuitos/main/pwd=/home/david/circuitos
+	/home/david/UPC/PRED/prac2/prac2.exe/breakpoints={{break main} 1 {} {}}
+	/home/david/circuitos/gnucap/simula/run_attach=0
+	/home/david/game/game/pwd=/home/david/game
+	/home/david/Escritorio/jose/jose_practica/prap/pwd=/home/david/Escritorio/jose/jose_practica
+	/home/david/game/game/run_cont=0
+	/home/david/Escritorio/jose/jose_practica/prap/run_cont=0
+	/home/david/UPC/PRED/prac2/prac2.exe/run_load=0
+	/home/david/UPC/PRED/prac.exe/executable=/home/david/UPC/PRED/prac.exe
+	/home/david/circuitos/main/run_run=1
+	/home/david/circuitos/main/args=< circuit1
+	/home/david/gba/gba_project/make_bg/executable=/home/david/gba/gba_project/make_bg
+	/home/david/UPC/PRED/prac2/prac2.exe/run_run=1
+	/home/david/game/game/breakpoints={{break lightmgr.cc:137} 0 {} {}} {{break lightmgr.cc:333} 0 {} {}} {{break renderer.cc:146} 1 {} {}} {{break renderer.cc:157} 1 {} {}} {{break lightmgr.cc:331} 1 {} {}} {{break lightmgr.cc:217} 1 {} {}} {{break lightmgr.cc:229} 1 {} {}} {{break lightmgr.cc:142} 1 {} {}} {{break main} 1 {} {}}
+	/home/david/game/game/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/david/Escritorio/jose/jose_practica/prap/all-keys=run_cont run_run breakpoints executable dirs target_cmd pwd port bg run_attach run_load args target hostname
+	/home/david/Escritorio/jose/jose_practica/prap/breakpoints={{break main} 1 {} {}}
+	/home/david/circuitos/gnucap/simula/run_load=0
+	/home/david/UPC/PRED/prac2/prac2.exe/run_attach=0
+	/home/david/UPC/PRED/prac.exe/run_cont=0
+	/home/david/gba/gba_project/make_bg/breakpoints={{break main} 1 {} {}}
+	/home/david/gba/gba_project/make_bg/bg=0
+	/home/david/circuitos/main/run_attach=0
+	/home/david/game/game/dirs=$cdir:$cwd
+	/home/david/Escritorio/jose/jose_practica/prap/dirs=$cdir:$cwd
+[mem]
+	size=4
+	ascii_char=.
+	numbytes=0
+	color=green
+	format=x
+	ascii=1
+	bytes_per_row=16
+[bg]
+	9=#ffb0ff
+	8=#ffffb0
+	7=#d0d0d0
+	6=#d0d0ff
+	5=#d0ffd0
+	4=#d0ffff
+	3=#ffd0d0
+	2=#ffd0ff
+	1=#ffffd0
+	15=#d0b0d0
+	0=#ffffff
+	14=#b0b0b0
+	13=#b0b0ff
+	12=#b0ffb0
+	11=#b0ffff
+	10=#ffb0b0
+[ipc]
+	cont_button=1
+	port=9909
+	stop_button=1
+	step_button=1
+	run_button=1
+	enabled=0
+	exit=1

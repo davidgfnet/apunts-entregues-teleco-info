@@ -1,0 +1,281 @@
+PRACTICA DE PRAP - JUEGO DE PRUEBAS PÚBLICO
+
+Esquema de este documento:
+
+0. Observaciones previas.
+1. Composición de los juegos de pruebas.
+2. Entrada y salida de las operaciones.
+3. Juego de pruebas público.
+
+-------------------------------------------------------------------------------
+0. OBSERVACIONES PREVIAS
+-------------------------------------------------------------------------------
+
+* Para una ejecución, el número de sitios web estudiados es constante. Dicho
+  número (M, entero mayor que 0) se lee al principio de la ejecución.
+
+* Para una ejecución, el número de puntos asignado al bonus por visitas sin
+  redundancia es constante.  Dicho número (K, entero mayor o igual que 0) se
+  lee al principio de la ejecución.
+
+* La longitud de los caminos es variable. El número de movimientos de cada
+  camino se proporciona inmediatamente antes de leer éste.
+
+* Los ficheros de entrada de los juegos de pruebas tendrán líneas de menos de
+  80 caracteres. Si necesitamos datos muy grandes para una misma operación, los
+  dividiremos en varias líneas.
+
+* Nunca se introducirán datos no válidos, salvo en el caso de los caminos,
+  contemplado en el enunciado, que pueden ser válidos o no.
+
+
+-------------------------------------------------------------------------------
+1. COMPOSICIÓN DE LOS JUEGOS DE PRUEBAS
+-------------------------------------------------------------------------------
+
+Los primeros datos que se leen son el número de sitios web (M) y el número de
+puntos del bonus por visitas sin redundancia (K).  A continuación, se leerán
+los sitios web. Éstos se presentarán con el formato de árboles binarios de
+pares de enteros. No se proporcionarán identificadores para los sitios, sino
+que deben asignarse correlativamente, de 1 a M, en orden de lectura.
+
+Cada árbol se entrará en preorden. Cada nodo será un par de enteros mayores que
+cero, que representan respectivamente el identificador de una página web y los
+puntos asignados a dicha página, en este orden. Un árbol vacío consistirá en un
+par (0, 0).
+
+A partir de aquí se aplican las operaciones abajo comentadas.  Cada operación
+se identifica mediante un código numérico, que será un entero negativo entre -1
+y -3 (esto se ha elegido simplemente para favorecer la legibilidad de los
+juegos de pruebas). Cada operación comenzará con su código y a éste le seguirán
+los datos de la misma, si es que necesita alguno. Se garantiza que no
+aparecerán códigos inexistentes.
+
+Aunque en el enunciado se dice que las operaciones -2 y -3 se aplican al final
+del estudio, no se deben plantear instrucciones especiales para ello. 
+
+
+-------------------------------------------------------------------------------
+2. ENTRADA Y SALIDA DE LAS OPERACIONES
+-------------------------------------------------------------------------------
+
+Seguidamente detallamos los elementos propios de las diferentes operaciones.
+Para ver ejemplos concretos de la sintaxis de sus entradas y salidas, id al
+apartado 3.
+
+
+* REALIZAR VISITA
+
+Identificador: -1
+
+Entrada: el identificador del sitio visitado, el número de movimientos de la
+visita, que llamaremos x, y la secuencia de movimentos y tiempos de
+permanencia. Ésta constará de 2x+1 números enteros, siguiendo el convenio
+expuesto en el enunciado.
+
+Salida: Si el camino de la visita es válido se ha de escribir un 1, seguido del
+número de puntos obtenido por la visita. En caso contrario, simplemente se
+escribe un 0.
+
+Efectos de la operación sobre el sistema: Se actualiza la información necesaria
+para realizar las operaciones -2 y -3.
+
+
+* MEJOR SITIO
+
+Identificador: -2
+
+Entrada: un número n, mayor que 0, pero tal que al menos exista un sitio que
+haya recibido previamente n visitas como mínimo.
+
+Salida: el identificador del sitio con mejor cociente de puntos por visita y la
+parte entera de dicho cociente. Solamente se consideran los sitios con un
+número de visitas válidas mayor o igual que n, y sus cocientes se consideran
+con todos sus decimales.
+
+Efectos de la operación sobre el sistema: ninguno.
+
+
+* MEJOR VISITA
+
+Identificador: -3
+
+Entrada: ninguna, pero previamente ha debido realizarse al menos una visita
+válida a algun sitio.
+
+Salida: el identificador del sitio que haya recibido la visita con más puntos,
+seguido por dicho número de puntos y por la secuencia de los identificadores de
+las páginas visitadas durante la misma, en las condiciones descritas en el
+enunciado.
+
+Efectos de la operación sobre el sistema: ninguno.
+
+
+* SALIR DEL PROGRAMA
+
+Identificador: -4
+
+
+-------------------------------------------------------------------------------
+3. JUEGO DE PRUEBAS PÚBLICO
+-------------------------------------------------------------------------------
+
+Entrada comentada: no intentéis encontrar información oculta derivada del
+tamaño o forma de los árboles, de los identificadores usados o de los demás
+datos o resultados de las operaciones, porque no la hay. Por ejemplo, el hecho
+de que todos los árboles sean de alrededor de 8 nodos es mera coincidencia.
+-------------------------------------------------------------------------------
+
+5                        // Número de sitios web 
+
+100                      // Puntos del bonus
+
+                         // Sitios web: los blancos extras se introducen 
+                         // para separar los pares, por legibilidad
+ 
+132 1  34 2  987 10  0 0  99 60  0 0  0 0  423 15  0 0  0 0  // Sitio 1 
+14 3  2 5  0 0  0 0  111 20  32 34  0 0  0 0  0 0 
+
+1 1  2 1  4 20  0 0  0 0  5 25  30 200  0 0  0 0  0 0  3 1  6 12  // Sitio 2  
+0 0  0 0  7 19  0 0  0 0
+
+10 10  20 10  35 50  0 0  0 0  28 40  0 0  0 0  30 10  50 60  // Sitio 3
+33 80  0 0  0 0  0 0  40 50  0 0  0 0 
+
+1 1  2 1  3 1  4 1  7 100  0 0  0 0  0 0  5 1  8 95  0 0  0 0  // Sitio 4
+0 0  0 0  6 10  0 0  0 0
+
+1 1  2 1  3 1  4 100  0 0  0 0  0 0  0 0  5 1  0 0  6 1  0 0  // Sitio 5 
+7 200  0 0  0 0 
+
+-1 2 4                     // Realizar una visita al sitio 2, de 4 movimientos
+1 -1 1 -2 10 -3 1 -3 1     // Tiempos y movimientos
+
+-1 4 6                           // Realizar una visita al sitio 4,
+1 -1 1 -1 1 -1 1 -1 2 -3 1 -3 1  // de 6 movimientos
+
+-1 5 5                        // Realizar una visita al sitio 5,   
+1 -1 1 -1 1 -2 1 -3 1 -3 1    // de 5 movimientos
+
+-2 1                   // Devolver el mejor sitio hasta el momento,
+                       // de entre los que hayan recibido al menos 1 visita 
+
+-3                     // Devolver la mejor visita hasta el momento
+
+-1 2 6                             // Realizar una visita al sitio 2
+1 -1 1 -3 1 -2 1 -2 15 -3 1 -2 1   // de 6 movimientos
+
+-2 1                   // Devolver el mejor sitio hasta el momento,
+                       // de entre los que hayan recibido al menos 1 visita 
+
+-3                     // Devolver la mejor visita hasta el momento
+
+-4                     // Salir del programa
+
+
+-------------------------------------------------------------------------------
+Salida comentada:
+-------------------------------------------------------------------------------
+
+1 354                  // visita válida, 354 puntos
+
+1 306                  // visita válida, 306 puntos
+
+0                      // visita no válida
+
+2 354                  // mejor sitio: 2; cociente: 354
+
+2 354                  // mejor visita: sitio 2, 354 puntos
+1 2 5 2 1              // ids páginas visitadas           
+
+1 309                  // visita válida, 309 puntos
+
+2 331                  // mejor sitio: 2; cociente (parte entera): 331
+
+2 354                  // mejor visita: sitio 2, 354 puntos
+1 2 5 2 1              // ids páginas visitadas            
+
+
+Al final puede haber una línea en blanco o más.
+-------------------------------------------------------------------------------
+
+Entrada sin comentar: cortadla y pegadla en un fichero para usarla como entrada
+a vuestro programa mediante la redirección <. La entrada se ha de poder
+procesar si donde hay un blanco, tabulador o salto de línea se ponen dos o más
+(por ejemplo, para separar las distintas acciones) o si donde hay dos o más
+saltos de línea sólo se pone uno.
+
+-------------------------------------------------------------------------------
+
+5   
+    
+100 
+    
+132 1  34 2  987 10  0 0  99 60  0 0  0 0  423 15  0 0  0 0  
+14 3  2 5  0 0  0 0  111 20  32 34  0 0  0 0  0 0 
+
+1 1  2 1  4 20  0 0  0 0  5 25  30 200  0 0  0 0  0 0  3 1  6 12  
+0 0  0 0  7 19  0 0  0 0
+
+10 10  20 10  35 50  0 0  0 0  28 40  0 0  0 0  30 10  50 60 
+33 80  0 0  0 0  0 0  40 50  0 0  0 0 			     
+							     
+1 1  2 1  3 1  4 1  7 100  0 0  0 0  0 0  5 1  8 95  0 0  0 0
+0 0  0 0  6 10  0 0  0 0				     
+							     
+1 1  2 1  3 1  4 100  0 0  0 0  0 0  0 0  5 1  0 0  6 1  0 0  
+7 200  0 0  0 0 
+
+-1 2 4                   
+1 -1 1 -2 10 -3 1 -3 1    
+
+-1 4 6                           
+1 -1 1 -1 1 -1 1 -1 2 -3 1 -3 1      
+
+-1 5 5                          
+1 -1 1 -1 1 -2 1 -3 1 -3 1   
+
+-2 1                   
+                              
+-3                     
+		       
+-1 2 6                 
+1 -1 1 -3 1 -2 1 -2 15 -3 1 -2 1 
+		       
+-2 1                   
+                       	       
+-3                     
+		       
+-4                     
+
+
+-------------------------------------------------------------------------------
+
+Salida sin comentar: vuestro resultado ha de coincidir exactamente con éste
+(probándolo con el comando diff -Bb de Linux), salvo las líneas en blanco del
+principio y del final, que pueden variar.
+
+-------------------------------------------------------------------------------
+
+1 354                  
+		       
+1 306                  
+		       
+0                      
+		       
+2 354                  
+		       
+2 354                  
+1 2 5 2 1              
+		       
+1 309                  
+		       
+2 331                  
+		       
+2 354                  
+1 2 5 2 1                   
+
+
+
+----------------------------------------------------------------------------
+

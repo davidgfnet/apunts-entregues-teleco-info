@@ -1,0 +1,234 @@
+\documentclass[10pt,a4paper,catalan]{article}
+\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage[pdftex,bookmarks=true,pdfborder={000}]{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+%\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\lstset{
+  frame=Ltb,
+  language=C,
+  captionpos=t,
+  tabsize=2,
+  framerule=0pt,
+  framextopmargin=5pt,
+  framexbottommargin=3pt,
+  framexleftmargin=0.4cm,
+  framesep=0pt,
+  rulesep=.4pt,
+  backgroundcolor=\color{gray97},
+  rulesepcolor=\color{black},
+  showstringspaces = false,
+  keywordstyle=\bfseries\color{blue},
+  commentstyle=\color{teal},
+  stringstyle=\ttfamily\color{red},
+  numbers=left,
+  numbersep=15pt,
+  numberstyle=\tiny,
+  numberfirstline = false,
+  breaklines=true,
+  showstringspaces=false,
+  basicstyle=\ttfamily\footnotesize,
+  emph={label}
+}
+
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+
+%opening
+\title{Pr\'actica 7: Medida de la respuesta frecuencial de un filtro de audio}
+\author{Dani Gabriel y Rafael G\'omez}
+\date{Abril 2011}
+
+\begin{document}
+
+\pagebreak
+
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+
+\section{Estudio Previo}
+
+\subsection{Diseño del Filtro}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{previo1}
+\end{figure} 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{previo2}
+\end{figure} 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{previo3}
+\end{figure} 
+
+\subsection{Medida de la fase y el retardo de grupo}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{previo4}
+\end{figure} 
+
+\subsection{Medida del módulo}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{previo5}
+\end{figure} 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{previo6}
+\end{figure} 
+
+\section{Trabajo de Laboratorio}
+
+\subsection{Montaje del Filtro}
+
+En este apartado construiremos el filtro diseñado en el estudio previo sobre una protoboard y verificaremos su 
+correcto funcionamiento. Para ello lo conectamos al osciloscopio de nuestro puesto de trabajo y le aplicamos una señal de entrada de 1KHz. Vemos que efectivamente, la señal recibida es igual a la transmitida.
+
+Sin embargo, si desdendemos por debajo de los 20Hz, o nos remontamos por encima de los 20kHz, vemos que la señal a la salida está bastante atenuada. Al principió nos pareció poca la atenuación observada, pero si tenemos en cuenta el bajo orden del filtro, no puede esperarse un valor mucho más elevado. Damos por tanto por bueno el diseño y montaje de nuestro filtro paso banda. 
+
+\subsection{Creación un subVI para el Generador de Funciones}
+
+Ahora vamos a generar un subVI que nos permita programar el generador de funciones con una forma de onda senoidal de frecuencia y amplitud variables. En la figura \ref{fig:generador} se puede ver el diagrama de bloques y el panel frontal del instrumento.
+
+\begin{figure}[H]
+ \centering
+ \subfloat[Diagrama de Bloques]{\includegraphics[width=0.8\textwidth]{genBloq}}
+ \vspace{0.5cm}
+ \subfloat[Panel Frontal]{\includegraphics[width=0.8\textwidth]{genFront}}
+ \caption{SubVI del Generador de Funciones}
+ \label{fig:generador}
+\end{figure} 
+
+\subsection{Realización del diagrama de bode}
+
+En este apartado vamos a tratar de dibujar el diagrama de bode de nuestro filtro mediante el VI que se nos proporciona en el enunciado de la práctica (ver figura \ref{fig:freqResponseBloq-draft})
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\textwidth]{genBloq}
+ \caption{Diagrama de Bloques del draft proporcionado}
+ \label{fig:freqResponseBloq-draft}
+\end{figure} 
+
+A continuación se muestra el resultado de ejecutar el VI para nuestro filtro. La configuración aplicada puede verse en el panel frontal de las figuras \ref{fig:bode1} y \ref{fig:bode2}, con 20 y 40 pasos de frecuencia respectivamente.
+
+\begin{figure}[H]
+ \centering
+ \subfloat[Módulo]{\includegraphics[width=0.4\textwidth]{bode1}}
+ \hspace{0.5cm}
+ \subfloat[Fase]{\includegraphics[width=0.4\textwidth]{bode1fase}}
+ \caption{Diagrama de Bode con 20 pasos de frecuencia}
+ \label{fig:bode1}
+\end{figure} 
+
+\begin{figure}[H]
+ \centering
+ \subfloat[Módulo]{\includegraphics[width=0.4\textwidth]{bode2}}
+ \hspace{0.5cm}
+ \subfloat[Fase]{\includegraphics[width=0.4\textwidth]{bode2fase}}
+ \caption{Diagrama de Bode con 40 pasos de frecuencia}
+ \label{fig:bode2}
+\end{figure} 
+
+Podemos ver que, como habíamos verificado en el apartado 2.1, el filtro tiene un comportamiento correcto y esperado según el diseño. Se trata efectivamente de un paso banda entre 20Hz y 20kHz, y en el diagarama de bode del módulo puede verse de manera mas clara y visual.
+
+\subsection{Cálculo de las frecuencias de corte a 3dB}
+
+Aunque tal y como aparece en el apartado anterior, el diagrama de bode ya es una herramienta muy buena y visual para verificar la respuestra frecuencial de un filtro, nos sería muy útil poder calcular tambien las frecuencias alta y baja de corte a 3dB. Esto nos daría una estimación del error cometido en el diseño (teóricamente debería ser muy pequeño y despreciable) respecto a nuestra banda de paso deseada.
+La mejora que vamos a realizar consiste en añadir un interpolador que detecta entre qué dos pasos se produce la caída de 3dB en módulo e interpola el punto exacto entre ellos. Añadimos un indicador a la salida para visualizarlo. Esto lo hacemos tanto para la frecuencia baja de corte como para la alta (ver figura \ref{fig:freqResponseInterpBloq})
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.8\textwidth]{freqResponse-interpolador-bloques}
+ \caption{VI con la mejora de detección de frecuencias de corte}
+ \label{fig:freqResponseInterpBloq}
+\end{figure} 
+
+Comprobamos que funciona. Establecemos 10 pasos de frecuencia para acortar el tiempo de simulación:
+
+\begin{figure}[H]
+ \centering
+ \subfloat[Módulo]{\includegraphics[width=0.4\textwidth]{bode2}}
+ \hspace{0.5cm}
+ \subfloat[Fase]{\includegraphics[width=0.4\textwidth]{bode2fase}}
+ \caption{Diagrama de Bode con detector de frecuencias de corte}
+ \label{fig:bodeInt}
+\end{figure} 
+
+Vemos que el funcionamiento es correcto y que las frecuencias de corte están dentro de un margen tolerable. El error de la inferior de de unos 4Hz y de la superior de unos 900Hz. Es normal que a mayor frecuencia mayor sea el error, además de por el diseño, por el interpolador, ya que entre los dos pasos de una frecuencia más alta, al estar representados en escala logarítmica, hay muchos más valores intermedios y es más dificil interpolar con exactitud.
+
+Ahora, para un diseño del VI más elegante, encapsularemos toda la parte de detección de frecuencias de corte en un subVI que luego conectaremos al diagrama de bloques del draft del enunciado, como se muestra en la figura \ref{fig:freqResp-subVI}
+
+\begin{figure}[H]
+ \centering
+ \subfloat[Diagrama de bloques del subVI dtector de frecuencias de corte]{\includegraphics[width=0.4\textwidth]{interpoladorBloques}}
+ \vspace{0.5cm}
+ \subfloat[Diagrama de bloques del VI general]{\includegraphics[width=0.6\textwidth]{freqResponse-interpolador-bloques-subVI}}
+ \caption{Respuesta en Frecuencia con detección de frecuencias de corte}
+ \label{fig:freqResp-subVI}
+\end{figure} 
+
+El resultado de la simulación es:
+
+\begin{figure}[H]
+ \centering
+ \subfloat[Módulo]{\includegraphics[width=0.4\textwidth]{bode20steps-interpolador-modulo-subVI}}
+ \hspace{0.5cm}
+ \subfloat[Fase]{\includegraphics[width=0.4\textwidth]{bode20steps-interpolador-fase-subVI}}
+ \caption{Diagrama de Bode con detector de frecuencias de corte}
+ \label{fig:freqResp-subVI-res}
+\end{figure}
+
+Que se ajusta a los resultados obtenidos anteriormente.
+
+\subsection{Mejora del VI: Eliminación de puntos sobrantes}
+
+Si vemos el diagrama de bode de los módulos representados hasta ahora, nos damos cuenta de que el primer punto es una medida un tanto incongruente, debida seguramente al transitorio. Por eso vamos a realizar una pequeña mejora en nuestro VI para descartar esta medida. Puede verse en la figura \ref{fig:VImejorado}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{freqResponse-interpolador-bloques-subVI-mejorado}
+ \caption{VI final con descarte de medidas incongruentes en el transitorio}
+ \label{fig:VImejorado}
+\end{figure} 
+
+El resultado final se puede comparar en la figura \ref{fig:VImejoradoComparacion} con el resultado sin aplicar esta última mejora. Pragmáticamente, no se trata de una mejora importante, pero le da un acabado mas limpio y profesional a nuestro programa de Respuesta en Frecuencia.
+
+\begin{figure}[H]
+ \centering
+ \subfloat[Módulo sin mejora]{\includegraphics[width=0.4\textwidth]{bode40steps-interpolador-modulo-subVI}}
+ \hspace{0.5cm}
+ \subfloat[Módulo con mejora]{\includegraphics[width=0.4\textwidth]{bode40steps-interpolador-modulo-subVI-mejorado}}
+ \caption{Comparación de resultados con y sin mejora de descarte de transitorio}
+ \label{fig:VImejoradoComparacion}
+\end{figure}
+
+\end{document}

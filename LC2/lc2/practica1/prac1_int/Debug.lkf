@@ -1,0 +1,6 @@
+-z -c -heap10000 -m"./Debug/prac1_int.map" -o"./Debug/prac1_int.out" -x -i"C:/CCStudio_v3.1/C6000/rtdx/lib" -i"C:/CCStudio_v3.1/C6000/csl/lib" -i"C:/CCStudio_v3.1/C6000/xdais/lib" -i"C:/CCStudio_v3.1/C6000/bios/lib" -i"C:/CCStudio_v3.1/C6000/cgtools/lib" -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib"
+"C:\CCStudio_v3.1\MyProjects\pepe\definitiu\practiques_noves\practica1\prac1_int\Debug\c6713dskinit.obj"
+"C:\CCStudio_v3.1\MyProjects\pepe\definitiu\practiques_noves\practica1\prac1_int\Debug\prac1_int.obj"
+"C:\CCStudio_v3.1\MyProjects\pepe\definitiu\practiques_noves\practica1\prac1_int\Debug\Vectors_intr.obj"
+"C:\CCStudio_v3.1\MyProjects\pepe\definitiu\practiques_noves\practica1\prac1_int\dsk6713bsl.lib"
+"C:\CCStudio_v3.1\MyProjects\pepe\definitiu\practiques_noves\practica1\prac1_int\C6713dsk.cmd"

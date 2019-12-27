@@ -1,0 +1,9 @@
+FILTRO PASO BAJO
+R 1 2 1M
+C 2 0 1n
+VI 1 0 PULSE (0 1 0 1p 1p 8u 16u)
+.PRINT TRAN V(1) V(0)
+.TRAN 0.8U 80U > circuit1.out
+.PROBE
+.END
+

@@ -1,0 +1,8 @@
+Aclaraciones al enunciado de la práctica de PRAP
+
+* De cara a la solución algorítmica de la práctica, deberemos suponer
+  que el número de movimentos de los caminos que aparecerán estará
+  acotado por una constante L. 
+
+* Para la opción 2 del programa, al dividir los puntos por el numero
+  de visitas, solo se cuentan las visitas con caminos válidos.

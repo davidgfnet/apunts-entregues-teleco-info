@@ -1,0 +1,8 @@
+-----------------------------  prac4.pjt - Debug  -----------------------------
+[process.c] "C:\CCStudio_v3.1\c6000\cgtools\bin\cl6x" -g -k -q -s -ol1 -fr"H:/practica4/Debug" -d"CHIP_6713" -mv6710 --mem_model:data=far -c -@"Debug.lkf" "process.c"
+
+[Linking...] "C:\CCStudio_v3.1\c6000\cgtools\bin\cl6x" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

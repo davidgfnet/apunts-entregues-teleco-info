@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MaterialWidget</class>
+ <widget class="QWidget" name="MaterialWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>241</width>
+    <height>199</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>221</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Ambient</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>DIffuse</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Specular</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="ColorWidget" name="colorwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>45</y>
+     <width>240</width>
+     <height>240</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>240</width>
+     <height>240</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonAplicar">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>160</y>
+     <width>101</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Aplicar</string>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonReiniciar">
+   <property name="geometry">
+    <rect>
+     <x>130</x>
+     <y>160</y>
+     <width>98</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Reiniciar</string>
+   </property>
+  </widget>
+  <widget class="QSlider" name="shininessSlider">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>221</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="maximum">
+    <number>128</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ColorWidget</class>
+   <extends>QWidget</extends>
+   <header>colorwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonAplicar</sender>
+   <signal>clicked()</signal>
+   <receiver>MaterialWidget</receiver>
+   <slot>Aplica()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>shininessSlider</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>MaterialWidget</receiver>
+   <slot>ValuesUpdated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonReiniciar</sender>
+   <signal>clicked()</signal>
+   <receiver>MaterialWidget</receiver>
+   <slot>Revert()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>MaterialWidget</receiver>
+   <slot>ComboChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorwidget</sender>
+   <signal>valueChanged()</signal>
+   <receiver>MaterialWidget</receiver>
+   <slot>ValuesUpdated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

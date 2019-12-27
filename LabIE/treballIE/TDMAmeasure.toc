@@ -1,0 +1,19 @@
+\select@language {catalan}
+\contentsline {section}{\numberline {1}Enunciado}{2}{section.1}
+\contentsline {section}{\numberline {2}Requerimientos de la medida}{2}{section.2}
+\contentsline {subsection}{\numberline {2.1}Resoluci\'on}{2}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Tiempo de Medida}{2}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Inicio de medida retardable}{3}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Capacidad de sincronizaci\'on para se\~nales burst}{3}{subsection.2.4}
+\contentsline {section}{\numberline {3}An\'alisis de las especificaciones de los modelos y descarte}{3}{section.3}
+\contentsline {subsection}{\numberline {3.1}Fluke's PM 6680}{3}{subsection.3.1}
+\contentsline {subsection}{\numberline {3.2}Fluke's PM 6681}{3}{subsection.3.2}
+\contentsline {subsection}{\numberline {3.3}Descarte de instrumentos inviables}{4}{subsection.3.3}
+\contentsline {section}{\numberline {4}C\'alculo de la incertidumbre esperada para cada opci\'on de medida}{4}{section.4}
+\contentsline {subsection}{\numberline {4.1}Errores aleatorios}{4}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Errores Sistem\'aticos}{5}{subsection.4.2}
+\contentsline {subsubsection}{\numberline {4.2.1}Error de cuantificaci\'on sistem\'atico}{5}{subsubsection.4.2.1}
+\contentsline {subsubsection}{\numberline {4.2.2}Error de la base de tiempos}{5}{subsubsection.4.2.2}
+\contentsline {subsubsection}{\numberline {4.2.3}Error sistem\'atico total}{5}{subsubsection.4.2.3}
+\contentsline {subsection}{\numberline {4.3}Incertidumbre total de la medida}{5}{subsection.4.3}
+\contentsline {section}{\numberline {5}Conclusiones}{5}{section.5}

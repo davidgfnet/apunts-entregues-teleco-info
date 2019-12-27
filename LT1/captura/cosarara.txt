@@ -1,0 +1,58 @@
+(LN) 1        12:36:55.0000000    Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+(EQ) 2        12:36:55.0000000    Line Status: Info State: INFO-3   
+(EQ) 3        12:36:55.0000000    Line Status: Info State: INFO-3   
+(EQ) 4        12:37:04.0472081    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=018 FCS=Good
+(LN) 5        12:37:04.0570128    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(EQ) 6        12:37:04.0614577    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=018 FCS=Good
+(LN) 7        12:37:04.0670131    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=016 FCS=Good
+(EQ) 8        12:37:04.3335783    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 9        12:37:04.3495032    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(EQ) 10       12:37:14.0889026    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=018 FCS=Good
+(LN) 11       12:37:14.0933246    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(EQ) 12       12:37:14.0975274    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=018 FCS=Good
+(LN) 13       12:37:14.1073249    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=016 FCS=Good
+(LN) 14       12:37:14.3438180    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=006 FCS=Good
+(EQ) 15       12:37:14.3482657    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=003 FCS=Good
+(EQ) 16       12:37:24.1232145    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=018 FCS=Good
+(LN) 17       12:37:24.1285190    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(EQ) 18       12:37:24.1329643    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=018 FCS=Good
+(LN) 19       12:37:24.1385192    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=016 FCS=Good
+(EQ) 20       12:37:24.3622111    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 21       12:37:24.3775123    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=006 FCS=Good
+(EQ) 22       12:37:24.3819565    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=003 FCS=Good
+(LN) 23       12:37:24.3846336    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(EQ) 24       12:37:34.1372807    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=018 FCS=Good
+(LN) 25       12:37:34.1538378    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=016 FCS=Good
+(EQ) 26       12:37:34.3966517    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 27       12:37:34.4118275    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=006 FCS=Good
+(EQ) 28       12:37:34.4162721    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=003 FCS=Good
+(LN) 29       12:37:34.4179488    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(LN) 30       12:37:44.1471520    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(EQ) 31       12:37:44.1515968    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=018 FCS=Good
+(EQ) 32       12:37:44.4309672    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 33       12:37:44.4511426    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(LN) 34       12:37:54.1834628    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(EQ) 35       12:37:54.4654035    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 36       12:37:54.4864534    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(LN) 37       12:37:55.1869364    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(LN) 38       12:37:56.1894062    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(LN) 39       12:37:57.1928759    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(LN) 40       12:37:58.1979668    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=SABME P=1 FCS=Good
+(LN) 41       12:37:59.2014404    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=SABME P=1 FCS=Good
+(LN) 42       12:38:00.2055274    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=SABME P=1 FCS=Good
+(LN) 43       12:38:01.2075010    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=SABME P=1 FCS=Good
+(LN) 44       12:38:02.2217170    LAPD: SAPI=63(TEI Management) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+(LN) 45       12:38:03.2198155    LAPD: SAPI=63(TEI Management) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+(LN) 46       12:38:04.2270314    LAPD: SAPI=63(TEI Management) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+(LN) 47       12:38:04.2337776    LAPD: SAPI=63(TEI Management) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+(EQ) 48       12:38:04.4997227    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 49       12:38:04.5182756    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(EQ) 50       12:38:14.5341589    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 51       12:38:14.5540861    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(EQ) 52       12:38:24.5684776    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 53       12:38:24.5887791    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(EQ) 54       12:38:34.6029134    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 55       12:38:34.6180890    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(LN) 56       12:38:40.8627600    Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+(EQ) 57       12:38:40.8627600    Line Status: Info State: INFO-3   
+(EQ) 58       12:38:40.8627600    Line Status: Info State: INFO-3   

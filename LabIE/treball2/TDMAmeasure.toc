@@ -1,0 +1,12 @@
+\select@language {catalan}
+\contentsline {section}{\numberline {1}Tema 3. Ejercicio 6}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Incertidumbre en modo lento}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Error Generado por Interferencia}{3}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3} Reducci\'on de Interferencias Mediante Promediado}{4}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Reducci\'on de Interferencias Mediante Aislamiento del Sensor}{5}{subsection.1.4}
+\contentsline {section}{\numberline {2}Tema 2. Ejercicio 7}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Selecci\'on de Escalas}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Incertidumbre de G}{6}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}Selecci\'on de una Base de Tiempos}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Incertidumbre de la Fase}{7}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Incertidumbre Debida a Ruido}{8}{subsection.2.5}

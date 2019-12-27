@@ -1,0 +1,38 @@
+
+CONSTRUCCIÓ
+-----------
+
+Cal compilar cada un dels widgets per separat abans de
+compilar el programa principal. Els widgets són:
+
+colorwidget
+materialwidget
+lightwidget
+widget
+
+Finalment cal compilar "app". El procés és l'habitual:
+
+qmake (o qmake-qt4)
+make
+
+FUNCIONAMENT
+------------
+
+Totes les opcions es poden dur a terme amb botons de
+l'interfície. S'ha implementat tot a excepció de la 
+creació/posicionament de llums.
+
+Un cop seleccionat els objectes es poden rotar, escalar,
+moure o editar-ne els materials. Quan s'està editant no
+es poden afegir més objectes a la selecció. Cal acabar
+l'operació o prémer ESC per sortir. Per esborrar la
+selecció es pot prémer ESC una segona vegada.
+
+Moure: Amb el ratolí i amb el botó dret per a posicionar.
+Rotar: Amb el ratolí i amb el botó dret per a fixar l'angle.
+Escalar: Amb el ratolí i amb el botó dret per a fixar.
+Editar material: Al panell dret es tria el material i es prem
+aplicar o revertir (equivalent a ESC).
+
+Guardar / Restaurar: Es guarden només els objectes seleccionats.
+

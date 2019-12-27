@@ -1,0 +1,9 @@
+PROGRAM
+  VARS
+    y Array[10] of  Struct
+                      ww Array[10] of Array[20] of Int
+                    EndStruct
+  ENDVARS
+
+  y[0].ww[1][2] := 0
+ENDPROGRAM

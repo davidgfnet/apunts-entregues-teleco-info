@@ -1,0 +1,107 @@
+#LyX 1.6.4 created this file. For more info see http://www.lyx.org/
+\lyxformat 345
+\begin_document
+\begin_header
+\textclass article
+\use_default_options true
+\language english
+\inputencoding auto
+\font_roman default
+\font_sans default
+\font_typewriter default
+\font_default_family default
+\font_sc false
+\font_osf false
+\font_sf_scale 100
+\font_tt_scale 100
+
+\graphics default
+\paperfontsize default
+\use_hyperref false
+\papersize default
+\use_geometry false
+\use_amsmath 1
+\use_esint 1
+\cite_engine basic
+\use_bibtopic false
+\paperorientation portrait
+\secnumdepth 3
+\tocdepth 3
+\paragraph_separation indent
+\defskip medskip
+\quotes_language english
+\papercolumns 1
+\papersides 1
+\paperpagestyle default
+\tracking_changes false
+\output_changes false
+\author "" 
+\author "" 
+\end_header
+
+\begin_body
+
+\begin_layout Standard
+\begin_inset Formula $H(s)=\frac{-1}{C_{f}\cdot R_{f1}}\frac{s}{S^{2}+\frac{2}{C_{f}\cdot R_{f5}}s+\frac{R_{f1}+R_{f2}}{R_{f1}\cdot R_{f2}}\cdot\frac{1}{C_{f}^{2}\cdot R_{f5}}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $R_{f1}=\frac{-Q}{C_{f}\cdot w_{0}\cdot k}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $R_{f5}=\frac{2Q}{C_{f}\cdot w_{0}}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+
+\family roman
+\series medium
+\shape up
+\size normal
+\emph off
+\bar no
+\noun off
+\color none
+\begin_inset Formula $R_{f2}=\frac{Q}{C_{f}\cdot w_{0}\cdot(2\cdot Q^{2}-k)}$
+\end_inset
+
+
+\end_layout
+
+\begin_layout Standard
+\begin_inset Formula $V_{c}(t)=V_{f}+(V_{0}-V_{f})\cdot e^{-\frac{t}{\tau}}$
+\end_inset
+
+
+\end_layout
+
+\end_body
+\end_document

@@ -1,0 +1,8 @@
+---------------------------  prac1_int.pjt - Debug  ---------------------------
+[prac1_intm.c] "C:\CCStudio_v3.1\c6000\cgtools\bin\cl6x" -g -k -q -s -ol1 -fr"C:/Documents and Settings/lc2125/Escritorio/practica1/Debug" -d"CHIP_6713" -mv6710 --mem_model:data=far -c -@"Debug.lkf" "prac1_intm.c"
+
+[Linking...] "C:\CCStudio_v3.1\c6000\cgtools\bin\cl6x" -@"Debug.lkf"
+<Linking>
+
+Build Complete,
+  0 Errors, 0 Warnings, 0 Remarks.

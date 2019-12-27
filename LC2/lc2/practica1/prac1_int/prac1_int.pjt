@@ -1,0 +1,59 @@
+; Code Composer Project File, Version 2.0 (do not modify or remove this line)
+
+[Project Settings]
+ProjectDir="C:\CCStudio_v3.1\MyProjects\pepe\definitiu\practiques_noves\practica1\prac1_int\"
+ProjectType=Executable
+CPUFamily=TMS320C67XX
+Tool="Compiler"
+Tool="CustomBuilder"
+Tool="DspBiosBuilder"
+Tool="Linker"
+Config="Debug"
+Config="Release"
+
+[Source Files]
+Source="..\..\include\dsk6713_dip.h"
+Source="..\..\include\dsk6713_flash.h"
+Source="..\..\include\dsk6713_led.h"
+Source="c6713dskinit.c"
+Source="dsk6713bsl.lib"
+Source="prac1_int.c"
+Source="Vectors_intr.asm"
+Source="C6713dsk.cmd"
+
+["Compiler" Settings: "Debug"]
+Options=-g -k -q -s -ol1 -fr"C:\CCStudio_v3.1\MyProjects\pepe\definitiu\practiques_noves\practica1\prac1_int\Debug" -d"CHIP_6713" -mv6710 --mem_model:data=far -c
+
+["Compiler" Settings: "Release"]
+Options=-q -o3 -fr"C:\CCStudio_v3.1\MyProjects\pepe\definitiu\practiques_noves\practica1\prac1_int\Release" -mv6700
+
+["DspBiosBuilder" Settings: "Debug"]
+Options=-v6x
+
+["DspBiosBuilder" Settings: "Release"]
+Options=-v6x
+
+["Linker" Settings: "Debug"]
+Options=-c -heap10000 -m".\Debug\prac1_int.map" -o".\Debug\prac1_int.out" -x -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib"
+
+["Linker" Settings: "Release"]
+Options=-q -c -m".\Release\Loop_intr.map" -o".\Release\Loop_intr.out" -x
+
+["..\..\include\dsk6713_dip.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\include\dsk6713_dip.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\include\dsk6713_flash.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\include\dsk6713_flash.h" Settings: "Release"]
+ExcludeFromBuild=true
+
+["..\..\include\dsk6713_led.h" Settings: "Debug"]
+ExcludeFromBuild=true
+
+["..\..\include\dsk6713_led.h" Settings: "Release"]
+ExcludeFromBuild=true
+

@@ -1,0 +1,67 @@
+
+int alpha_vector [26] = {0x3E400,0x16C00,0x30C00,0xEC00,0x34C00,
+			0x34400,0x32C00,0x1E400,0xA000,0xAC00,
+			0x36400,0x10C00,0x6400,0x6400,0x3AC00,
+			0x3C400,0x3E000,0x4400,0x36800,0x14C00,
+			0x1AC00,0x18800,0x1C800,0x1E400,0x1E800,0x2CC00 };
+
+int num_vector [10] = {0x3AC00,0xA000,0x2CC00,0x2E800,0x1E000,
+			0x36800,0x36C00,0x2A000,0x3EC00,0x3E800 };
+
+
+
+// Alphabet
+1 0 1 0 1 1 1 0 0 0 1 0 0 0 1 1 1 0 1 0 0 0 0 0 0 1
+1 0 0 1 0 0 0 1 1 1 0 0 0 0 1 1 1 0 0 0 1 1 1 1 1 1
+1 1 0 1 0 0 1 1 1 1 1 0 1 1 1 0 1 0 1 0 1 0 0 1 1 0
+0 1 1 1 1 0 1 0 0 1 0 1 0 0 1 0 0 0 1 1 1 1 1 0 1 1
+1 1 1 1 1 1 1 1 0 1 1 1 1 1 1 1 0 1 0 1 1 0 0 1 0 1
+1 1 1 0 1 1 1 1 0 0 1 1 0 0 1 1 1 0 1 1 1 1 1 1 1 0
+1 1 0 1 1 1 0 1 0 0 1 0 1 1 0 1 1 1 1 1 0 0 1 1 1 1
+
+// Nums
+1 0 1 1 0 1 1 1 1 1
+1 1 1 1 1 0 0 1 1 1
+1 1 0 1 1 1 1 1 1 1
+1 0 1 1 0 1 1 0 1 1
+1 0 1 0 0 0 1 0 1 0
+1 0 0 0 1 1 1 0 1 1
+0 0 1 1 1 1 1 0 1 1
+
+
+
+
+
+#include <iostream>
+#include <stdio.h>
+#include <stdlib.h>
+
+using namespace std;
+
+int main () {
+	int a[10];
+	int b[10];
+	int c[10];
+	int d[10];
+	int e[10];
+	int f[10];
+	int g[10];
+
+	for (int i = 0; i < 10; i++) cin >> a[i];
+	for (int i = 0; i < 10; i++) cin >> b[i];
+	for (int i = 0; i < 10; i++) cin >> c[i];
+	for (int i = 0; i < 10; i++) cin >> d[i];
+	for (int i = 0; i < 10; i++) cin >> e[i];
+	for (int i = 0; i < 10; i++) cin >> f[i];
+	for (int i = 0; i < 10; i++) cin >> g[i];
+
+
+	for (int i = 0; i < 10; i++) {
+		// bit 10 al 17   (e,d,dot, c, g, b ,f a
+		int val = e[i] | (d[i]<<1) | (c[i]<<3) | (g[i]<<4) | (b[i]<<5) | (f[i]<<6) | (a[i]<<7);
+		val = val << 10;
+		printf ("0x%X",val);
+		printf (",");
+	}
+}
+

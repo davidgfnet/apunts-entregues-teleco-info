@@ -1,0 +1,145 @@
+/////////////////////////////////
+// CISE4
+// Leds_1.axe: Projecte de configuració.
+// v1.0 - (c)2001 DEE-UPC
+// Timers.c: Programa de config dels temporitzadors
+/////////////////////////////////
+
+#include <embedded.h>
+
+#include "typedefs.h"
+#include "int.h"
+#include "register.h"
+#include "timers.h"	//funcions de control dels temporitzadors
+
+// Variables globals
+int iTick;		//control del pas per la RSI de la base de temps
+int contador = 0;
+int encendido = 0;
+BYTE posicion = 1;
+
+void interrupt RSITimer0(void);
+void interrupt RSITimer1(void);
+
+BYTE far *pbyReg;
+
+// Inicialització dels temporitzadors
+// (actualment, només la base de temps)
+void IniTimers(void)
+{
+BYTE far *pbyReg;	//punter a un registre
+WORD far *pwoReg;	//punter a un registre
+
+   //substituir el vector d'interrupció de la base de temps
+   disable();		//no permetre cap INT
+   setvect(INTBASETEMPS, RSIBaseTemps);
+   enable();
+
+   //crear el punter al registre de control del processador PRC
+	pbyReg = (BYTE far *)MK_FP(RSEG, PRC);
+
+   //modificar el registre PRC per a una int cada 2.05 ms
+   *pbyReg = 0x04;	//RAM interna deshabilitada
+   						//Fclk de 4 MHz
+
+   //apuntar al registre TBIC
+	pbyReg = (BYTE far *)MK_FP(RSEG, TBIC);
+   *pbyReg &= 0xBF;	//activar interrupcions BT
+//   *pbyReg |= ~(0xBF);	//activar interrupcions BT
+
+   // Iniciarel timer 0
+   pbyReg = (BYTE far *)MK_FP(RSEG, MD0);
+   pbyReg[0] = 0;
+   pbyReg[1] = 13;
+
+   pbyReg = (BYTE far *)MK_FP(RSEG, TMC0);
+   *pbyReg = 0x80 | 0x40;
+
+
+   disable();
+   setvect(INTCOUNTER0, RSITimer0);
+   enable();
+
+   pbyReg = (BYTE far *)MK_FP(RSEG, TMIC0);
+   *pbyReg &= 0xBF;	//activar interrupcions timer0
+
+
+      // Iniciarel timer 1
+   pbyReg = (BYTE far *)MK_FP(RSEG, MD1);
+   pbyReg[0] = 0;
+   pbyReg[1] = 128;
+
+   pbyReg = (BYTE far *)MK_FP(RSEG, TMC1);
+   *pbyReg = 0x80 | 0x40;
+
+   disable();
+   setvect(INTCOUNTER2, RSITimer1);
+   enable();
+
+   pbyReg = (BYTE far *)MK_FP(RSEG, TMIC2);
+   *pbyReg &= 0xBF;	//activar interrupcions timer1
+}
+
+// Retorna després d'un retard de 'iTemps'
+// ticks de la base de temps.
+// (1 tick aprox xx.x ms)
+void Retard(int iTemps)
+{
+   //modificar el valor de la variable de control
+   disable();
+   iTick = iTemps;
+   enable();
+
+   //esperar 'iTemps'
+   while(iTick != 0)
+   	enable();
+}
+
+// Servei d'interrupció de la base de temps
+void interrupt RSIBaseTemps(void)
+{
+   enable();	//permetre altres INT.
+          /*
+	if (contador%50 == 0) {
+         if (encendido == 0) encendido = 1;
+   	   else encendido = 0;
+
+         if (encendido == 1) SetP2(posicion);
+         else SetP2(0);
+   }
+   if (contador >= 500) {
+      posicion = posicion<<1;
+      if (posicion == 0) posicion = 1;
+   	contador = 0;
+   }
+   contador++;   */
+
+   FINT;
+}
+
+
+
+void interrupt RSITimer1(void) {
+   enable();	//permetre altres INT.
+
+		posicion = posicion<<1;
+      if (posicion == 0) posicion = 1;
+
+
+   FINT;
+}
+
+void interrupt RSITimer0(void) {
+   enable();	//permetre altres INT.
+
+   if (encendido == 0) encendido = 1;
+   else encendido = 0;
+
+   if (encendido == 1) SetP2(posicion);
+   else  SetP2(0);
+
+
+   FINT;
+}
+
+

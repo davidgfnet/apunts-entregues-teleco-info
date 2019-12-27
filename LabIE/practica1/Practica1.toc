@@ -1,0 +1,10 @@
+\select@language {catalan}
+\contentsline {section}{\numberline {1}Trabajo de Laboratorio}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}El puesto de trabajo}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Entorno de trabajo}{2}{subsection.1.2}
+\contentsline {subsection}{\numberline {1.3}Generador Sinusiodal}{2}{subsection.1.3}
+\contentsline {subsection}{\numberline {1.4}Orden de ejecuci\'on}{3}{subsection.1.4}
+\contentsline {subsection}{\numberline {1.5}Dise\~no de un generador virtual de se\~nales}{3}{subsection.1.5}
+\contentsline {section}{\numberline {2}Trabajo opcional}{5}{section.2}
+\contentsline {subsection}{\numberline {2.1}Visualizaci\'on del espectro}{6}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Generador de ruido regulable}{6}{subsection.2.2}

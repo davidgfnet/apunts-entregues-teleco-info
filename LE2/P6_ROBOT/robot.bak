@@ -1,0 +1,26 @@
+/////////////////////////////////
+// LAB II
+// Robot.axe: Projecte de configuració.
+// v1.0 - (c)2001 DEE-UPC
+// Robot.c:Programa principal del projecte  
+/////////////////////////////////
+
+#include <embedded.h>
+
+#include "typedefs.h"
+#include "register.h"
+#include "timers.h"	//funcions de control dels temporitzadors
+#include "ports.h"	//funcions de control dels ports
+
+BYTE posicion = 1;
+
+void main() {
+   BYTE b; /* Variable local */
+   IniPorts(); /* Inicializa los puertos */
+   IniTimers(); /* Inicializa la base de tiempos */
+   enable(); /* Habilita interrupciones */
+   while (1) {}
+
+}
+
+

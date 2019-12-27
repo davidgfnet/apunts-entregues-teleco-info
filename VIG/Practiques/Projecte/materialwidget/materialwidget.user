@@ -1,0 +1,339 @@
+<!DOCTYPE QtCreatorProject>
+<qtcreator>
+ <data>
+  <variable>RunConfiguration0-BaseEnvironmentBase</variable>
+  <value type="int">2</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-CommandLineArguments</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>RunConfiguration0-ProFile</variable>
+  <value type="QString">colorwidget.pro</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-RunConfiguration.name</variable>
+  <value type="QString">colorwidget</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UseDyldImageSuffix</variable>
+  <value type="bool">false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UseTerminal</variable>
+  <value type="bool">false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UserEnvironmentChanges</variable>
+  <valuelist type="QVariantList"/>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UserSetName</variable>
+  <value type="bool">false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UserSetWorkingDirectory</variable>
+  <value type="bool">false</value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-UserWorkingDirectory</variable>
+  <value type="QString"></value>
+ </data>
+ <data>
+  <variable>RunConfiguration0-type</variable>
+  <value type="QString">Qt4ProjectManager.Qt4RunConfiguration</value>
+ </data>
+ <data>
+  <variable>activeRunConfiguration</variable>
+  <value type="int">0</value>
+ </data>
+ <data>
+  <variable>activebuildconfiguration</variable>
+  <value type="QString">Debug</value>
+ </data>
+ <data>
+  <variable>buildConfiguration-Debug</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
+   <value key="QtVersionId" type="int">0</value>
+   <value key="ToolChain" type="int">0</value>
+   <value key="addQDumper" type=""></value>
+   <value key="buildConfiguration" type="int">2</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildConfiguration-Release</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
+   <value key="QtVersionId" type="int">0</value>
+   <value key="addQDumper" type=""></value>
+   <value key="buildConfiguration" type="int">0</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-buildstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList">
+    <value type="QString">ALLIANCE_TOP=/usr/lib/alliance</value>
+    <value type="QString">COLORTERM=gnome-terminal</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-4kGKoZs5tc,guid=24afb4b837669262f835fe9c000000b5</value>
+    <value type="QString">DESKTOP_SESSION=gnome</value>
+    <value type="QString">DISPLAY=:0.0</value>
+    <value type="QString">DREAL_TECHNO_NAME=/usr/lib/alliance/etc/cmos.dreal</value>
+    <value type="QString">ELP_TECHNO_NAME=/usr/lib/alliance/etc/prol.elp</value>
+    <value type="QString">GDMSESSION=gnome</value>
+    <value type="QString">GDM_KEYBOARD_LAYOUT=es</value>
+    <value type="QString">GDM_LANG=es_ES.utf8</value>
+    <value type="QString">GENVIEW_TECHNO_NAME=/usr/lib/alliance/etc/cmos.genview</value>
+    <value type="QString">GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-QeUAue</value>
+    <value type="QString">GNOME_KEYRING_PID=1679</value>
+    <value type="QString">GRAAL_TECHNO_NAME=/usr/lib/alliance/etc/cmos.graal</value>
+    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/david/.gtkrc-1.2-gnome2</value>
+    <value type="QString">G_BROKEN_FILENAMES=1</value>
+    <value type="QString">HISTCONTROL=ignoredups</value>
+    <value type="QString">HISTSIZE=1000</value>
+    <value type="QString">HOME=/home/david</value>
+    <value type="QString">HOSTNAME=toshiba</value>
+    <value type="QString">IMSETTINGS_INTEGRATE_DESKTOP=yes</value>
+    <value type="QString">IMSETTINGS_MODULE=none</value>
+    <value type="QString">KDEDIRS=/usr</value>
+    <value type="QString">KDE_IS_PRELINKED=1</value>
+    <value type="QString">LANG=es_ES.utf8</value>
+    <value type="QString">LANGUAGE=</value>
+    <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:/usr/lib/alliance/lib:/usr/lib/alliance/lib</value>
+    <value type="QString">LESSOPEN=|/usr/bin/lesspipe.sh %s</value>
+    <value type="QString">LOGNAME=david</value>
+    <value type="QString">LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:</value>
+    <value type="QString">MAIL=/var/spool/mail/david</value>
+    <value type="QString">MANPATH=:/usr/lib/alliance/man:/usr/local/share/man:/usr/share/man/es:/usr/share/man:/usr/lib/alliance/man:/usr/man:/usr/local/man:/usr/lib/alliance/man</value>
+    <value type="QString">MBK_C4_LIB=./cellsC4</value>
+    <value type="QString">MBK_CATAL_NAME=CATAL</value>
+    <value type="QString">MBK_CATA_LIB=.:/usr/lib/alliance/cells/sxlib:/usr/lib/alliance/cells/dp_sxlib:/usr/lib/alliance/cells/rflib:/usr/lib/alliance/cells/rf2lib:/usr/lib/alliance/cells/ramlib:/usr/lib/alliance/cells/romlib:/usr/lib/alliance/cells/pxlib:/usr/lib/alliance/cells/padlib</value>
+    <value type="QString">MBK_IN_LO=vst</value>
+    <value type="QString">MBK_IN_PH=ap</value>
+    <value type="QString">MBK_OUT_LO=vst</value>
+    <value type="QString">MBK_OUT_PH=ap</value>
+    <value type="QString">MBK_SCALE_X=100</value>
+    <value type="QString">MBK_SPI_MODEL=/usr/lib/alliance/etc/spimodel.cfg</value>
+    <value type="QString">MBK_TARGET_LIB=/usr/lib/alliance/cells/sxlib</value>
+    <value type="QString">MBK_VDD=vdd</value>
+    <value type="QString">MBK_VSS=vss</value>
+    <value type="QString">MBK_WORK_LIB=.</value>
+    <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-david</value>
+    <value type="QString">PATH=/usr/lib/qt4/bin:/usr/lib/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lib/alliance/bin:/usr/local/pspdev/bin/:/home/david/bin:/usr/lib/alliance/bin:/usr/local/pspdev/bin/</value>
+    <value type="QString">PULSE_PROP_media.role=none</value>
+    <value type="QString">PULSE_PROP_phonon.streamid={d1797341-2374-4fae-b65e-f5384648cd29}</value>
+    <value type="QString">PWD=/home/david/UPC/VIG/Practiques/P3/colorwidget</value>
+    <value type="QString">QTDIR=/usr/lib/qt4</value>
+    <value type="QString">QTINC=/usr/lib/qt-3.3/include</value>
+    <value type="QString">QTLIB=/usr/lib/qt-3.3/lib</value>
+    <value type="QString">QT_IM_MODULE=xim</value>
+    <value type="QString">RDS_IN=cif</value>
+    <value type="QString">RDS_OUT=cif</value>
+    <value type="QString">RDS_TECHNO_NAME=/usr/lib/alliance/etc/cmos.rds</value>
+    <value type="QString">SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1687,unix/unix:/tmp/.ICE-unix/1687</value>
+    <value type="QString">SHELL=/bin/bash</value>
+    <value type="QString">SHLVL=2</value>
+    <value type="QString">SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/keyring-QeUAue/ssh</value>
+    <value type="QString">TERM=xterm</value>
+    <value type="QString">USER=david</value>
+    <value type="QString">USERNAME=david</value>
+    <value type="QString">VH_BEHSFX=vbe</value>
+    <value type="QString">VH_DLYSFX=dly</value>
+    <value type="QString">VH_MAXERR=10</value>
+    <value type="QString">VH_PATSFX=pat</value>
+    <value type="QString">WINDOWID=75509485</value>
+    <value type="QString">WINDOWPATH=1</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-david-1zQuO0/database</value>
+    <value type="QString">XDG_SESSION_COOKIE=1dc9738ce73759ec0dde172900000012-1291109512.196891-1900694441</value>
+    <value type="QString">XFSM_PARAM_NAME=/usr/lib/alliance/etc/xfsm.par</value>
+    <value type="QString">XMODIFIERS=@im=none</value>
+    <value type="QString">XPAT_PARAM_NAME=/usr/lib/alliance/etc/xpat.par</value>
+    <value type="QString">XSCH_PARAM_NAME=/usr/lib/alliance/etc/xsch.par</value>
+   </valuelist>
+   <valuelist key="abstractProcess.arguments" type="QVariantList">
+    <value type="QString">/home/david/UPC/VIG/Practiques/P3/colorwidget/colorwidget.pro</value>
+    <value type="QString">-spec</value>
+    <value type="QString">linux-g++</value>
+    <value type="QString">-r</value>
+    <value type="QString">CONFIG+=debug</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString">/usr/bin/qmake-qt4</value>
+   <value key="abstractProcess.enabled" type="bool">true</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/david/UPC/VIG/Practiques/P3/colorwidget</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-buildstep1</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
+   <valuelist key="abstractProcess.Environment" type="QVariantList">
+    <value type="QString">ALLIANCE_TOP=/usr/lib/alliance</value>
+    <value type="QString">COLORTERM=gnome-terminal</value>
+    <value type="QString">DBUS_SESSION_BUS_ADDRESS=unix:abstract=/tmp/dbus-4kGKoZs5tc,guid=24afb4b837669262f835fe9c000000b5</value>
+    <value type="QString">DESKTOP_SESSION=gnome</value>
+    <value type="QString">DISPLAY=:0.0</value>
+    <value type="QString">DREAL_TECHNO_NAME=/usr/lib/alliance/etc/cmos.dreal</value>
+    <value type="QString">ELP_TECHNO_NAME=/usr/lib/alliance/etc/prol.elp</value>
+    <value type="QString">GDMSESSION=gnome</value>
+    <value type="QString">GDM_KEYBOARD_LAYOUT=es</value>
+    <value type="QString">GDM_LANG=es_ES.utf8</value>
+    <value type="QString">GENVIEW_TECHNO_NAME=/usr/lib/alliance/etc/cmos.genview</value>
+    <value type="QString">GNOME_DESKTOP_SESSION_ID=this-is-deprecated</value>
+    <value type="QString">GNOME_KEYRING_CONTROL=/tmp/keyring-QeUAue</value>
+    <value type="QString">GNOME_KEYRING_PID=1679</value>
+    <value type="QString">GRAAL_TECHNO_NAME=/usr/lib/alliance/etc/cmos.graal</value>
+    <value type="QString">GTK_RC_FILES=/etc/gtk/gtkrc:/home/david/.gtkrc-1.2-gnome2</value>
+    <value type="QString">G_BROKEN_FILENAMES=1</value>
+    <value type="QString">HISTCONTROL=ignoredups</value>
+    <value type="QString">HISTSIZE=1000</value>
+    <value type="QString">HOME=/home/david</value>
+    <value type="QString">HOSTNAME=toshiba</value>
+    <value type="QString">IMSETTINGS_INTEGRATE_DESKTOP=yes</value>
+    <value type="QString">IMSETTINGS_MODULE=none</value>
+    <value type="QString">KDEDIRS=/usr</value>
+    <value type="QString">KDE_IS_PRELINKED=1</value>
+    <value type="QString">LANG=es_ES.utf8</value>
+    <value type="QString">LANGUAGE=</value>
+    <value type="QString">LD_LIBRARY_PATH=/usr/lib/qtcreator:/usr/lib/alliance/lib:/usr/lib/alliance/lib</value>
+    <value type="QString">LESSOPEN=|/usr/bin/lesspipe.sh %s</value>
+    <value type="QString">LOGNAME=david</value>
+    <value type="QString">LS_COLORS=rs=0:di=01;34:ln=01;36:mh=00:pi=40;33:so=01;35:do=01;35:bd=40;33;01:cd=40;33;01:or=40;31;01:mi=01;05;37;41:su=37;41:sg=30;43:ca=30;41:tw=30;42:ow=34;42:st=37;44:ex=01;32:*.tar=01;31:*.tgz=01;31:*.arj=01;31:*.taz=01;31:*.lzh=01;31:*.lzma=01;31:*.tlz=01;31:*.txz=01;31:*.zip=01;31:*.z=01;31:*.Z=01;31:*.dz=01;31:*.gz=01;31:*.lz=01;31:*.xz=01;31:*.bz2=01;31:*.tbz=01;31:*.tbz2=01;31:*.bz=01;31:*.tz=01;31:*.deb=01;31:*.rpm=01;31:*.jar=01;31:*.war=01;31:*.ear=01;31:*.sar=01;31:*.rar=01;31:*.ace=01;31:*.zoo=01;31:*.cpio=01;31:*.7z=01;31:*.rz=01;31:*.jpg=01;35:*.jpeg=01;35:*.gif=01;35:*.bmp=01;35:*.pbm=01;35:*.pgm=01;35:*.ppm=01;35:*.tga=01;35:*.xbm=01;35:*.xpm=01;35:*.tif=01;35:*.tiff=01;35:*.png=01;35:*.svg=01;35:*.svgz=01;35:*.mng=01;35:*.pcx=01;35:*.mov=01;35:*.mpg=01;35:*.mpeg=01;35:*.m2v=01;35:*.mkv=01;35:*.ogm=01;35:*.mp4=01;35:*.m4v=01;35:*.mp4v=01;35:*.vob=01;35:*.qt=01;35:*.nuv=01;35:*.wmv=01;35:*.asf=01;35:*.rm=01;35:*.rmvb=01;35:*.flc=01;35:*.avi=01;35:*.fli=01;35:*.flv=01;35:*.gl=01;35:*.dl=01;35:*.xcf=01;35:*.xwd=01;35:*.yuv=01;35:*.cgm=01;35:*.emf=01;35:*.axv=01;35:*.anx=01;35:*.ogv=01;35:*.ogx=01;35:*.aac=01;36:*.au=01;36:*.flac=01;36:*.mid=01;36:*.midi=01;36:*.mka=01;36:*.mp3=01;36:*.mpc=01;36:*.ogg=01;36:*.ra=01;36:*.wav=01;36:*.axa=01;36:*.oga=01;36:*.spx=01;36:*.xspf=01;36:</value>
+    <value type="QString">MAIL=/var/spool/mail/david</value>
+    <value type="QString">MANPATH=:/usr/lib/alliance/man:/usr/local/share/man:/usr/share/man/es:/usr/share/man:/usr/lib/alliance/man:/usr/man:/usr/local/man:/usr/lib/alliance/man</value>
+    <value type="QString">MBK_C4_LIB=./cellsC4</value>
+    <value type="QString">MBK_CATAL_NAME=CATAL</value>
+    <value type="QString">MBK_CATA_LIB=.:/usr/lib/alliance/cells/sxlib:/usr/lib/alliance/cells/dp_sxlib:/usr/lib/alliance/cells/rflib:/usr/lib/alliance/cells/rf2lib:/usr/lib/alliance/cells/ramlib:/usr/lib/alliance/cells/romlib:/usr/lib/alliance/cells/pxlib:/usr/lib/alliance/cells/padlib</value>
+    <value type="QString">MBK_IN_LO=vst</value>
+    <value type="QString">MBK_IN_PH=ap</value>
+    <value type="QString">MBK_OUT_LO=vst</value>
+    <value type="QString">MBK_OUT_PH=ap</value>
+    <value type="QString">MBK_SCALE_X=100</value>
+    <value type="QString">MBK_SPI_MODEL=/usr/lib/alliance/etc/spimodel.cfg</value>
+    <value type="QString">MBK_TARGET_LIB=/usr/lib/alliance/cells/sxlib</value>
+    <value type="QString">MBK_VDD=vdd</value>
+    <value type="QString">MBK_VSS=vss</value>
+    <value type="QString">MBK_WORK_LIB=.</value>
+    <value type="QString">ORBIT_SOCKETDIR=/tmp/orbit-david</value>
+    <value type="QString">PATH=/usr/lib/qt4/bin:/usr/lib/qt-3.3/bin:/usr/kerberos/sbin:/usr/kerberos/bin:/usr/local/bin:/usr/bin:/bin:/usr/local/sbin:/usr/sbin:/sbin:/usr/lib/alliance/bin:/usr/local/pspdev/bin/:/home/david/bin:/usr/lib/alliance/bin:/usr/local/pspdev/bin/</value>
+    <value type="QString">PULSE_PROP_media.role=none</value>
+    <value type="QString">PULSE_PROP_phonon.streamid={d1797341-2374-4fae-b65e-f5384648cd29}</value>
+    <value type="QString">PWD=/home/david/UPC/VIG/Practiques/P3/colorwidget</value>
+    <value type="QString">QTDIR=/usr/lib/qt4</value>
+    <value type="QString">QTINC=/usr/lib/qt-3.3/include</value>
+    <value type="QString">QTLIB=/usr/lib/qt-3.3/lib</value>
+    <value type="QString">QT_IM_MODULE=xim</value>
+    <value type="QString">RDS_IN=cif</value>
+    <value type="QString">RDS_OUT=cif</value>
+    <value type="QString">RDS_TECHNO_NAME=/usr/lib/alliance/etc/cmos.rds</value>
+    <value type="QString">SESSION_MANAGER=local/unix:@/tmp/.ICE-unix/1687,unix/unix:/tmp/.ICE-unix/1687</value>
+    <value type="QString">SHELL=/bin/bash</value>
+    <value type="QString">SHLVL=2</value>
+    <value type="QString">SSH_ASKPASS=/usr/libexec/openssh/gnome-ssh-askpass</value>
+    <value type="QString">SSH_AUTH_SOCK=/tmp/keyring-QeUAue/ssh</value>
+    <value type="QString">TERM=xterm</value>
+    <value type="QString">USER=david</value>
+    <value type="QString">USERNAME=david</value>
+    <value type="QString">VH_BEHSFX=vbe</value>
+    <value type="QString">VH_DLYSFX=dly</value>
+    <value type="QString">VH_MAXERR=10</value>
+    <value type="QString">VH_PATSFX=pat</value>
+    <value type="QString">WINDOWID=75509485</value>
+    <value type="QString">WINDOWPATH=1</value>
+    <value type="QString">XAUTHORITY=/var/run/gdm/auth-for-david-1zQuO0/database</value>
+    <value type="QString">XDG_SESSION_COOKIE=1dc9738ce73759ec0dde172900000012-1291109512.196891-1900694441</value>
+    <value type="QString">XFSM_PARAM_NAME=/usr/lib/alliance/etc/xfsm.par</value>
+    <value type="QString">XMODIFIERS=@im=none</value>
+    <value type="QString">XPAT_PARAM_NAME=/usr/lib/alliance/etc/xpat.par</value>
+    <value type="QString">XSCH_PARAM_NAME=/usr/lib/alliance/etc/xsch.par</value>
+   </valuelist>
+   <value key="abstractProcess.IgnoreReturnValue" type="bool">false</value>
+   <valuelist key="abstractProcess.arguments" type="QVariantList">
+    <value type="QString">-w</value>
+   </valuelist>
+   <value key="abstractProcess.command" type="QString">/usr/bin/make</value>
+   <value key="abstractProcess.enabled" type="bool">true</value>
+   <value key="abstractProcess.workingDirectory" type="QString">/home/david/UPC/VIG/Practiques/P3/colorwidget</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Debug-cleanstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Debug</value>
+   <value key="cleanConfig" type="bool">true</value>
+   <valuelist key="makeargs" type="QVariantList">
+    <value type="QString">clean</value>
+   </valuelist>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Release-buildstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Release-buildstep1</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfiguration-Release-cleanstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString">Release</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildconfigurations</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">Debug</value>
+   <value type="QString">Release</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>buildstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString"></value>
+   <value key="mkspec" type="QString"></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildstep1</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString"></value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>buildsteps</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">trolltech.qt4projectmanager.qmake</value>
+   <value type="QString">trolltech.qt4projectmanager.make</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>cleanstep0</variable>
+  <valuemap type="QVariantMap">
+   <value key="ProjectExplorer.BuildConfiguration.DisplayName" type="QString"></value>
+   <value key="clean" type="bool">true</value>
+  </valuemap>
+ </data>
+ <data>
+  <variable>cleansteps</variable>
+  <valuelist type="QVariantList">
+   <value type="QString">trolltech.qt4projectmanager.make</value>
+  </valuelist>
+ </data>
+ <data>
+  <variable>defaultFileEncoding</variable>
+  <value type="QByteArray">System</value>
+ </data>
+ <data>
+  <variable>project</variable>
+  <valuemap type="QVariantMap"/>
+ </data>
+</qtcreator>

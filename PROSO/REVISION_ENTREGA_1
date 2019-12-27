@@ -1,0 +1,23 @@
+
+
+// Tema entry de syscall (pushes inecesarios)
+
+// EOI, solo al final de interrupcion
+
+// Revisar permisos de la GDT para las excepciones
+
+// copy_form/to_user!!!
+
+// write/read vigialar el retorno de la funcion dependiente además de vigilar el retorno de copy_from/to_user
+
+// numero de syscalls (define)
+
+
+// Quitar EOI de task_switch si no venimos de Int. reloj. Revisar los demás EOIs.
+
+
+
+---------------------------
+
+Toda función de sys que devuelva -1 debe deshacer los cambios!!!
+

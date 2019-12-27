@@ -1,0 +1,9 @@
+
+
+3. Valor medio - 1M+-5% = Valor medio - 1M +- 50000 ??? 110
+4. No, ya que sigue colándose interferencias de 50Hz
+5. no se parece a una gaussiana, es una U
+6. No...
+7. Al trenzar los cables mejora ligeramente el aspecto del histograma, pero aun asi, la desviación tipo esta fuera de los margenes.
+8. Aun no... Aun hay ruido de 50Hz... según el previo 4, podemos suponer que la interferencia generada por la red de 50Hz es menor que 10mV de amplitud para tint=4ms y sin cables
+9. Hemos logrado eliminar el ruido de 50Hz. Seguimos sin cumplir, ya que con un tiempo de integración tan grande se producen derivas...

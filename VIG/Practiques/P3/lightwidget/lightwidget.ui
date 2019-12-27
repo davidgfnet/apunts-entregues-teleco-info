@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LightWidget</class>
+ <widget class="QWidget" name="LightWidget">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>240</width>
+    <height>165</height>
+   </rect>
+  </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="windowTitle">
+   <string>Form</string>
+  </property>
+  <widget class="QComboBox" name="comboBox">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>221</width>
+     <height>27</height>
+    </rect>
+   </property>
+   <item>
+    <property name="text">
+     <string>Light 0</string>
+    </property>
+   </item>
+   <item>
+    <property name="text">
+     <string>Light 1</string>
+    </property>
+   </item>
+  </widget>
+  <widget class="ColorWidget" name="colorwidget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>45</y>
+     <width>240</width>
+     <height>88</height>
+    </rect>
+   </property>
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="minimumSize">
+    <size>
+     <width>240</width>
+     <height>88</height>
+    </size>
+   </property>
+  </widget>
+  <widget class="QSlider" name="sliderLlum">
+   <property name="geometry">
+    <rect>
+     <x>69</x>
+     <y>140</y>
+     <width>161</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="minimum">
+    <number>1</number>
+   </property>
+   <property name="maximum">
+    <number>30</number>
+   </property>
+   <property name="orientation">
+    <enum>Qt::Horizontal</enum>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>140</y>
+     <width>66</width>
+     <height>17</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Alçada</string>
+   </property>
+  </widget>
+ </widget>
+ <customwidgets>
+  <customwidget>
+   <class>ColorWidget</class>
+   <extends>QWidget</extends>
+   <header>colorwidget.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>comboBox</sender>
+   <signal>currentIndexChanged(int)</signal>
+   <receiver>LightWidget</receiver>
+   <slot>ComboChanged(int)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>colorwidget</sender>
+   <signal>valueChanged()</signal>
+   <receiver>LightWidget</receiver>
+   <slot>ValuesUpdated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>120</x>
+     <y>23</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>80</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>sliderLlum</sender>
+   <signal>valueChanged(int)</signal>
+   <receiver>LightWidget</receiver>
+   <slot>ValuesUpdated()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>149</x>
+     <y>149</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>119</x>
+     <y>82</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

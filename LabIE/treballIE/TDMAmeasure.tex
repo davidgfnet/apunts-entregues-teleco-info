@@ -1,0 +1,333 @@
+\documentclass[10pt,a4paper,catalan]{article}
+\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage[pdftex,bookmarks=true,pdfborder={000}]{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+%\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\lstset{
+  frame=Ltb,
+  language=C,
+  captionpos=t,
+  tabsize=2,
+  framerule=0pt,
+  framextopmargin=5pt,
+  framexbottommargin=3pt,
+  framexleftmargin=0.4cm,
+  framesep=0pt,
+  rulesep=.4pt,
+  backgroundcolor=\color{gray97},
+  rulesepcolor=\color{black},
+  showstringspaces = false,
+  keywordstyle=\bfseries\color{blue},
+  commentstyle=\color{teal},
+  stringstyle=\ttfamily\color{red},
+  numbers=left,
+  numbersep=15pt,
+  numberstyle=\tiny,
+  numberfirstline = false,
+  breaklines=true,
+  showstringspaces=false,
+  basicstyle=\ttfamily\footnotesize,
+  emph={label}
+}
+
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+
+%opening
+\title{Trabajo de Evaluaci\'on Continuada. Medidas de la frecuencia de una señal TDMA}
+\author{Rafael G\'omez Bule}
+\date{Abril 2011}
+
+\begin{document}
+
+\pagebreak
+
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+
+\section{Enunciado}
+
+El objetivo del trabajo es evaluar que modelo y que opción de la base de tiempos de un frecuencímetro/contador de 
+FLUKE tenemos que adquirir para poder medir, con la resolución y la incertidumbre necesaria, la frecuencia del 
+\emph{burst} de una señal TDMA de 900 MHz.
+
+Para ello se evaluaran las especificaciones (resolución, incertidumbre, etc) de las distintas opciones disponibles 
+que permiten realizar esta medida y se escogerá la más conveniente para la aplicación.
+
+Suponer que el equipo está calibrado desde hace menos de un año y que las medidas pueden hacerse entre 20 y 26ºC. 
+
+\section{Requerimientos de la medida}
+
+Los resultados de esta primera fase del problema han sido tomados del documento adjunto al enunciado \emph{Measuring 
+TDMA signal frequencies in digital cellular radio mobile telephones. Application Note}
+
+Tras analizar la problemática particular de la medida de frecuencias de una señal TDMA, nos encontramos con los 
+siguientes requisitos:
+
+\subsection{Resolución}
+
+La resolución que precisa una señal de las características de la que pretendemos medir (900 MHz)es de unos 10 a 
+20 Hz, como podemos leer en la bibliografía adjunta.
+
+\begin{quote}
+``Align-ment of these
+systems requires measurement
+resolution of 10 to 20 Hz when
+measuring the 800/900 MHz or
+1500 MHz signal from the mobile
+station.''
+\end{quote} 
+
+Como podemos leer más abajo en el documento citado anteriormente, esto representa una resolución relativa de 1
+sobre $10^8$. 
+
+\subsection{Tiempo de Medida}
+
+Sabemos que la señal de burst está \emph{on} tan solo durante $6,7ms$. Es por eso que precisamos de un sistema que 
+alcance la resolución requerida en un instante lo bastante pequeño como para permitir al instrumento realizar
+la medida dentro del tiempo de burst en la que la señal es valida (como se ha especificado arriba). Para eso, la 
+velocidad de medida del \emph{frequency counter} deberá ser también suficientemente elevada. Nótese que hay un 
+pequeño intérvalo cuando el burst se activa y se desactiva en el que la señal aun no está estable, por lo que no 
+debemos ajustarnos demasiado a los $6,7ms$ y dejarermos un margen de seguridad bastante amplio (Ver figura 
+\ref{fig:1-1-tdma-burst}).
+
+\begin{quote}
+``To achieve the required 10
+Hz resolution in a sufficiently short
+measuring time, the measuring
+device (frequency counter) needs
+to be very fast and to have a very
+high resolution.''
+\end{quote} 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{1-TDMA-burst}
+ \caption{Estructura típica de la señal TDMA}
+ \label{fig:1-1-tdma-burst}
+\end{figure}
+
+\subsection{Inicio de medida retardable}
+
+Como ya se ha hecho referencia anteriormente, la señal de burst tiene un corto intérvalo de transitorio que no nos 
+interesa medir. Por eso, es conveniente que el instrumento permita ajustar un tiempo de espera antes de iniciar la
+medida.
+
+\subsection{Capacidad de sincronización para señales burst}
+
+Será necesario que nuestro instrumento sea capaz de sincronizarse con señales repetitivas no continuas (burst). El 
+valor del retardo de sincronización deberá estar comprendido entre el de la duración de la señal de burst y el del 
+tiempo de repetición de burst.
+
+\begin{quote}
+``This SYNC-DELAY" must be longer than the
+burst-on time, and shorter than
+the burst repetition time.''
+\end{quote} 
+
+\section{Análisis de las especificaciones de los modelos y descarte} 
+
+Una vez sabemos qué es lo que necesitamos, vamos a ver qué instrumentos cumplen con esos requisitos y cuáles deben 
+ser descartados.
+
+\subsection{Fluke's PM 6680}
+
+\begin{enumerate}
+
+ \item {\bf Resolución:} \emph{250 ps single-shot time interval resolution}. Esto significa que para medidas de 
+frecuencia de un segundo de duración, la resolución que puede alcanzar es de $250x10^{-11}$. Por lo tanto, para 
+una medida de 5ms de duración, la resolución será de $5x10^{-8}$ (ver ecuación \ref{eq:res6680}), que es cinco 
+veces mayor que el valor máximo requerido.  
+
+\begin{equation}
+\frac{5ms\cdot250\cdot10^{-11}}{1s}=5\cdot10^{-8} \label{eq:res6680}
+\end{equation}
+
+\item {\bf Tiempo de Medida:} \emph{Single cycle, 0.8, 1.6, 3.2, 6.4, 12.8 $\mu$s and 50 $\mu$s to 20s (or to
+400s for some functions)}. Vemos que el tiempo de medida mínimo es de 0.8 $\mu$s, que es suficiente para la medida
+que necesitamos hacer.
+\item {\bf Inicio de medida retardable:} No tiene.
+\item {\bf Capacidad de sincronización para señales burst:} \emph{Input A (PM 6680B): Up to 160 MHz}. Puede medir 
+frecuencias de burst de hasta 160MHz.
+\end{enumerate}
+
+\subsection{Fluke's PM 6681}
+
+\begin{enumerate}
+ \item {\bf Resolución:} \emph{50 ps single-shot time interval resolution}. Esto significa que para medidas de 
+frecuencia de un segundo de duración, la resolución que puede alcanzar es de $50x10^{-11}$. Por lo tanto, para 
+una medida de 5ms de duración, la resolución será de $1x10^{-8}$ (ver ecuación \ref{eq:res6681}), que se 
+corresponde con el valor deseado.  
+
+\begin{equation}
+\frac{5ms\cdot50\cdot10^{-11}}{1s}=1\cdot10^{-8} \label{eq:res6681}
+\end{equation}
+
+\item {\bf Tiempo de Medida:} \emph{Single cycle, 80, 160, 320, 640, 1280 ns and 20 $\mu$s to 20s (or to 400s for 
+some functions)}. Vemos que el tiempo de medida mínimo es de 80 ns, que es suficiente para la medida que 
+necesitamos hacer y mejor que el del modelo 6680.
+
+\item {\bf Inicio de medida retardable:} \emph{Start Delay Range (PM 6681) 200 ns to 1s, 100 ns resolution}. Puede
+aplicarse un retardo de 200ns a 1s en pasos de 100ns. 
+
+\item {\bf Capacidad de sincronización para señales burst:} \emph{Input A (PM 6681): Up to 300 MHz ;Input C (PM 
+6681): Up to 3 GHz with options}. Puede medir frecuencias de burst de hasta 300MHz por el input A y hasta 3GHz por
+el C. Mucho mejor que el modelo 6680. Además, como podemos leer en la \emph{Application Note}, el 6681 es capaz de 
+sincronizar señales de burst con un retardo que puede ser ajustado entre 50ns y 1.3s en pasos de 10ns. Nuestra 
+aplicación requerirá ajustarlo a un valor de entre 6.7 y 20ms, que es perfectamente factible con esta utilidad. 
+
+\begin{quote}
+``Finally the PM 6681 also features
+self-synchronization to facilitate
+very high resolution
+measurements in repetitive burst
+signals. This feature eliminates the
+need for an external
+synchronization signal.
+In the PM 6681, this time
+can be set in steps of 10 ns from
+50 ns up to 1.3s.''
+\end{quote}
+
+\end{enumerate}
+
+\subsection{Descarte de instrumentos inviables}
+
+El modelo 6680 no posee una resolución suficiente para nuestra aplicación, no incorpora la opción del inicio
+de medida retardable y no posee una utilida de autosincronización para señales burst. Por estos motivos se nos hace
+inviable la utilización de este instrumento. 
+
+El 6681, además de cumplir con todos los requisitos necesarios, posee un tiempo de medida mínimo inferior al del 
+6680 y es capaz de medir frecuencias de burst mucho mayores.
+
+\section{Cálculo de la incertidumbre esperada para cada opción de medida}
+
+En esta sección se calcularán las incertidumbres sistemáticas y aleatorias que pueden resultar de medir la frecuencia
+de una señal de burst de nuestras características. Los errores sistemáticos dependerán de la opción de medida 
+seleccionada (base de tiempos), mientras que los aleatorios, no.
+
+\subsection{Errores aleatorios}
+
+Se calculan mediante la fórmula:
+
+\begin{equation}
+\frac{\sqrt{(QE)^2 + 2 \cdot{} (Start Trigger Error)^2}}{Measuring Time} \cdot{} Frequency \label{eq:err-aleat}
+\end{equation}
+
+\noindent
+{\bf Donde:}\\
+
+{\leftskip=1cm 
+
+\noindent
+QE es el error de cuantificación, que para una medida tomada entre 10ºC y 40ºC (la nuestra es tomada entre 20 y 
+26ºC), es de 50ps\\
+
+\noindent
+Measuring Time es 5ms\\
+
+\noindent
+Frequency es 900MHz\\
+
+\noindent
+Start Trigger Error se calcula mediante:
+
+\begin{equation}
+\frac{\sqrt{(VnoiseInput)^2+(VnoiseSignal)^2}}{SignalSlewRate(V/s)atTriggerPoint}=\frac{\sqrt{(100 \mu V)^2+(1 \mu V)^2}}{5.6 \cdot 10^6}=17.86 \cdot 10^{-12}=17.86ps
+\end{equation}
+
+\begin{itemize}
+
+ {\setlength\itemindent{25pt}
+ \item VnoiseSignal=100$\mu$V }
+
+ {\setlength\itemindent{25pt}
+ \item VnoiseInput es el valor del ruido de la señal de entrada. Trabajaremos con la hipótesis de una señal de entrada de 60dB$\mu$V (1mV) y 30dB de SNR(aproximadamente el mínimo para el correcto funcionamiento de la señal). Por lo tanto VnoiseInput$=60dB$$\mu$$V - 30dB=30dB$$\mu$$V=1$$\mu$$V$.}
+ 
+ {\setlength\itemindent{25pt}
+ \item Slew-Rate es la derivada primera de la función de señal evaluada en 0. Sabiendo que nuestra señal es $s(t)=1 \cdot 10^{-3}sin(2$$\pi$$900 \cdot 10^{6} \cdot t)$, entonces $s'(t)=1 \cdot 10^{-3} \cdot 2$$\pi$$900 \cdot 10^{6} \cdot cos(2$$\pi$$900 \cdot 10^{6} \cdot t)$. Por lo tanto, Slew-Rate=$5.6 \cdot 10^6 V/s$}
+
+\end{itemize}
+
+}
+
+Finalmente, y aplicando la ecuación \ref{eq:err-aleat}, obtenemos que el error aleatorio es de $10.083Hz \approx 10Hz$ 
+
+\subsection{Errores Sistemáticos}
+
+La incertidumbre sistemática será la suma de las causadas por el error en la base de tiempos ($\pm TimeBaseError \cdot Frequency$) y el error de cuantificación ($\pm QE \cdot Frequency/MeasuringTime$).
+
+\subsubsection{Error de cuantificación sistemático}
+
+Si calculamos el error de cuantificación sistemático, con QE=50ps, Frequency=900MHz y MeasuringTime=5ms, obtenemos un resultado de $\pm 9Hz$
+
+\subsubsection{Error de la base de tiempos}
+
+Miramos en la tabla de \emph{Time Base Options} del \emph{datasheet} las distintas bases de tiempo y el error que especifica para cada una de ellas en la fila de \emph{Typical total uncertainty} (para medidas realizadas entre 20ºC y 26ºC), para equipos calibrados desde hace menos de un año. Aplicamos la formula del error de base de tiempo para cada una de ellas.
+
+\begin{tabular}{|l |l |l |}
+\hline
+{\bf Opción} & {\bf Time Base Error} & {\bf Incertidumbre causada} \\
+\hline
+PM6681/-1- & $7 \cdot 10{-6}$ & $\pm 6300 Hz$ \\
+\hline
+PM6681/-5- & $1 \cdot 10{-7}$ & $\pm 90 Hz$ \\
+\hline
+PM6681/-6- & $2.5 \cdot 10{-8}$ & $\pm 22.5 Hz$	\\
+\hline
+PM6681/-7- & $6 \cdot 10{-10}$ & $\pm 0.54 Hz$ \\
+\hline
+\end{tabular}
+
+\subsubsection{Error sistemático total}
+
+La incertidumbre sistemática total será la suma de la generada por la opción de la base de tiempos y por el error de cuantificación. 
+
+\begin{description}
+ \item[PM6681/-1-]: $\pm 6309 Hz$
+ \item[PM6681/-5-]: $\pm 99 Hz$
+ \item[PM6681/-6-]: $\pm 31.5 Hz$
+ \item[PM6681/-7-]: $\pm 9.54 Hz$
+\end{description}
+
+\subsection{Incertidumbre total de la medida}
+
+A continuación se presenta para cada opción de base de tiempos, la incertidumbre final, que es la suma geométrica de la aleatoria y la sistemática ($\sqrt{ErrorAleatorio^2 + ErrorSistematico^2}$).
+
+\begin{description}
+ \item[PM6681/-1-]: $\pm 6309.01 Hz$
+ \item[PM6681/-5-]: $\pm 99.50 Hz$
+ \item[PM6681/-6-]: $\pm 33.05 Hz$
+ \item[PM6681/-7-]: $\pm 13.82 Hz$
+\end{description}
+
+\section{Conclusiones}
+
+Despues de haber calculado todas las incertidumbres, habría que establecer una incertidumbre expandida máxima permitida para poder seleccionar aquellas opciones que cumplan con la restricción y entre ellas escoger una.
+Mi propuesta es establecer $\pm 50Hz$ con una tolerancia del 95\% (k=2)
+
+Vemos, por lo tanto, que las opciones PM6681/-1- y PM6681/-5- son inviables si queremos cumplir con los objetivos marcados, y, por lo tanto, tendremos que quedarnos con el PM6681/-6- o el PM6681/-7-. Este último es mucho más preciso, aunque utiliza una base de tiempos de Rubidio, más cara que el OXCO (Oven-Controlled Crystal Oscillator) del PM6681/-6-. Tenemos, por lo tanto un compromiso entre coste y precisión que deberemos resolver. ¿Preferimos ahorrar en costes o dar los resultados con un menor margen de error? De ello dependerá la utilidad que queramos darle a las medidas y el fin que tendrá la aplicación del aparato que estamos midiendo.
+
+\end{document}

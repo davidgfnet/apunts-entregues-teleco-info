@@ -1,0 +1,10 @@
+NOTA: Enunciat de problema 3 (7 punts), al
+context tancarVol(codV: String, nomC: String): Bool
+
+a la pre 1.0, ha de ser:
+
+pre 1.0. Existeix el comandant nomC i té menys de 3 vols tancats
+
+a la post, afegir:
+
+Si el vol és obert, nbPass no té perquè estar actualitzat.

@@ -1,0 +1,148 @@
+El texto que tenéis delante completa la información que ya conocéis sobre el
+sistema de evaluación de la práctica de PRAP.  Por ello, su nivel de detalle es
+muy alto y deberéis leerlo con mucha atención y de principio a fin, incluso
+varias veces. En caso contrario, vuestro trabajo podría verse seriamente
+afectado !!!
+
+
+                   EVALUACIÓN DEL LABORATORIO DE PRAP
+
+
+La nota del laboratorio de PRAP gira en torno a la práctica. Ésta se evalúa a
+partir de tres elementos: el examen, el documento y el código C++.
+
+
+EXAMEN:
+
+El examen de la práctica se realizará el miércoles 21 de mayo a las 11
+horas.  Veréis la convocatoria con todo detalle en el Racó de l'Alumne.
+
+
+DOCUMENTO:
+
+El documento de la práctica, con la solución en lenguaje algorítmico, se
+entregará durante el examen, también el miércoles 21 de mayo.  En las aulas se
+aclarará si hay que entregar por grupos, por corrector, etc.
+
+Dicho documento constará de la resolución de la práctica siguiendo la
+metodología de la asignatura (ver ejemplos publicados en los apuntes).  No se
+debe entregar ningún programa escrito en C++.
+
+Respecto al formato del documento, inspiraos en los problemas resueltos de
+diseño modular y en el ejemplo de práctica resuelta. Ha de incluir el programa
+principal, las especificaciones de los módulos y las implementaciones de los
+mismos. No ha de incluir el enunciado. Cada operación recursiva o iterativa
+debe estar convenientemente justificada, salvo las de lectura o escritura.
+
+El documento habrá de comenzar con una portada en la que consten el nombre y
+los apellidos del alumno, su subgrupo y su corrector, el título de la práctica
+y su fecha de entrega. A lo largo del documento, usad como mínimo una letra de
+12 puntos en el texto y de 10 en los algoritmos, y una cara por hoja. En
+general, procurad que sea lo más legible posible.
+
+Por otra parte, está prohibido el uso de encuadernaciones de plástico u otros
+materiales.  Un par de grapas o un clip es suficiente.
+
+
+CODIGO C++:
+
+El código de la práctica ha de entregarse antes de las 21:00 del miércoles 28
+de mayo. Dicho código se transferirá a través de la página de entrega de
+prácticas de la FIB, que es accesible desde el Racó de l'Alumne. Recordad que,
+obligatoriamente, el código ha de estar escrito en C++.
+
+El material que se ha de entregar consiste en tantos ficheros .cpp y .hpp como
+la práctica necesite para compilarse y funcionar, excepto los que correspondan
+a las clases o útiles de la asignatura.  Normalmente, esto da lugar a un
+fichero .cpp para el programa principal y sendos ficheros .cpp y .hpp por cada
+módulo de datos definido por vosotros.  No debéis comprimir ni empaquetar los
+ficheros, sino transferirlos uno por uno.  Podéis transferir el mismo fichero
+tantas veces como sea necesario, ya que sólo se guarda la última versión. Un
+fichero transferido no se puede borrar, sólo sustituir por otro. No debéis
+transferir los ficheros procedentes de directorios de includes de la
+asignatura.  No debéis transferir ficheros *.o o ejecutables de C++.
+
+El fichero que alberga el programa principal ha de llamarse *exactamente*
+prap.cpp (todo en minúsculas).  Los demás nombres podéis elegirlos vosotros,
+pero, como se trata de clases de datos, habréis de darle a cada clase el mismo
+nombre que el fichero que la contiene.  Ni en los nombres de los ficheros, ni
+en el código deben aparecer los caracteres ñ, ç, letras acentuadas ni
+caracteres no alfanuméricos en general.
+
+Aseguraos, asimismo, de que la práctica se pueda compilar por línea de comandos
+mediante la aplicación de un único comando. Éste será 
+
+g++ -c *.cpp -I$INCLUDES_CPP 
+
+suponiendo que INCLUDES_CPP referencia a un directorio que contiene los
+ficheros que faltan. Dicho de otro modo, todos los ficheros .o se han de
+generar correctamente mediante el mencionado comando, sin compilar cada clase
+por separado. Si una práctica no compila en estas condiciones es como si no se
+hubiera entregado.
+
+El linkado ha de poder hacerse mediante la instrucción
+
+g++ -o prap.exe *.o $OBJETOS_CPP/Impl_Arbol.o
+
+donde se entiende que los ficheros *.o son los que proceden de la anterior
+compilación.  OBJETOS_CPP referencia a un directorio que contiene el fichero
+Impl_Arbol.o. Recordad que no debéis transferir vuestros ficheros .o, ya que la
+compilación de la práctica es realizada por nuestro sistema de corrección.
+
+Es necesario, además, que la práctica esté compilada y probada en el Linux de
+la FIB o en la máquina lasuno (ver la entrada correspondiente en la web de
+PRAP), incluso si la habéis desarrollado en Windows.  La mejor forma de estar
+seguros es descargar del Racó los ficheros que hayáis entregado, guardarlos en
+un directorio nuevo y probarlos allí mediante los comandos arriba indicados.
+La gestión de los datos y resultados se realizará mediante la redirección de
+los mismos con < y >.
+
+La evaluación del código se realiza mediante su ejecución sobre cuatro juegos
+de pruebas, uno público (tanto él como su solución se conocen antes de la
+entrega), llamado JPUB, y tres privados, que llamaremos JPR1, JPR2 y JPR3. JPUB
+prueba todas las funcionalidades de la práctica en situaciones sencillas. JPR1
+es similar al público. JPR2 y JPR3 prueban situaciones más complejas.
+
+El resultado de la ejecución de un jp es correcto si, guardado en un fichero,
+coincide *totalmente* con la solución oficial. Nuestra corrección funciona como
+el comando LINUX diff -Bb.
+
+Obviamente, os recomendamos que os montéis vuestros propios juegos de pruebas
+para estar más seguros del funcionamiento de vuestra práctica.
+
+
+NOTA DE LABORATORIO:
+
+Como sabéis, la nota global de laboratorio se obtiene así
+
+.45 * Nota del examen de la práctica + .55 * Nota del desarrollo de la práctica
+
+La nota del desarrollo de la práctica depende de la nota del documento y de la
+nota de ejecución del código. Se calcula así
+
+- si la nota de ejecución es mayor que 0
+
+     Nota del desarrollo = .5 * Nota del documento + .5 * Nota de la ejecución
+
+- si la nota de ejecución es 0 o NP
+
+     Nota del desarrollo = 0
+
+
+La nota de la ejecución (sobre 100) se calcula así
+
+     si los cuatro jp dan resultado correcto --> nota = 100
+     si no, si JPUB, JPR1 y otro jp dan resultado correcto --> nota = 200/3
+     si no, si JPUB y JPR1 dan resultado correcto --> nota = 100/3
+     si no --> nota = 0
+     fsi
+
+
+COPIAS:
+
+Si dos o más documentos o programas presentan excesivas similitudes se
+considerarán como copiados y darán lugar a la aplicación de las medidas
+previstas al respecto en la Guía Docent de la FIB y, en particular, la nota de
+la práctica será 0. Por eso, es importante que dicho desarrollo se realice de
+manera totalmente individual.
+

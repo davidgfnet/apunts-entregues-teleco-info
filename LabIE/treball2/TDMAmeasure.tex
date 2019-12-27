@@ -1,0 +1,367 @@
+\documentclass[10pt,a4paper,catalan]{article}
+\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage[pdftex,bookmarks=true,pdfborder={000}]{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+%\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\lstset{
+  frame=Ltb,
+  language=C,
+  captionpos=t,
+  tabsize=2,
+  framerule=0pt,
+  framextopmargin=5pt,
+  framexbottommargin=3pt,
+  framexleftmargin=0.4cm,
+  framesep=0pt,
+  rulesep=.4pt,
+  backgroundcolor=\color{gray97},
+  rulesepcolor=\color{black},
+  showstringspaces = false,
+  keywordstyle=\bfseries\color{blue},
+  commentstyle=\color{teal},
+  stringstyle=\ttfamily\color{red},
+  numbers=left,
+  numbersep=15pt,
+  numberstyle=\tiny,
+  numberfirstline = false,
+  breaklines=true,
+  showstringspaces=false,
+  basicstyle=\ttfamily\footnotesize,
+  emph={label}
+}
+
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+
+%opening
+\title{Segundo Trabajo de Evaluaci\'on Continuada}
+\author{Rafael G\'omez Bule}
+\date{Mayo 2011}
+
+\begin{document}
+
+\pagebreak
+
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+
+\section{Tema 3. Ejercicio 6}
+
+Se quiere medir la temperatura, de aproximadamente 75 °C, de una superficie conductora
+que está puesta a tierra. Para ello utilizamos un sensor de temperatura con una sensibilidad
+10,4 mV/°C. El sensor se adhiere a la superficie, y uno de los terminales está en contacto
+con ella. Para realizar las medidas utilizamos un  multímetro digital de 5½ dígitos con
+extensión de escala del 200\% y entrada flotante, calibrado hace menos de un año (ver la
+figura adjunta), la temperatura ambiente es de 15 °C. El multímetro permite dos modos de
+medida de tensión continua, el rápido con un tiempo de integración del convertidor A/D de
+$T_{int}$=1 ms, y el lento con un $T_{int}$=1 PLC. Para realizar la conexión utilizamos 100 metros de
+cable de par trenzado con una resistencia nominal de 100 mW/m.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figEnunciado}
+ \caption{Sistema de Medida}
+ \label{fig:figEnunciado}
+\end{figure}
+
+\subsection{Incertidumbre en modo lento}
+
+{\bf ¿Cuál es la incertidumbre de la medida en grados debida a los errores del multímetro en el modo de medida lento?}
+\\
+
+Vamos a calcular una estimación de la medida teórica:
+
+$$T_{teorica} \cdot Sensibilidad(\mu V/ºC)=Medida(V)$$
+$$75ºC \cdot 10,4 \mu V/ºC=780\mu V$$
+\\
+
+Sabemos, por lo tanto, que la medida en Voltios debe rondar los 780$\mu$V.
+
+Nos quedaremos con el rango de 1mV
+\\
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{figResolucion}
+ \caption{Resolución seleccionada}
+ \label{fig:figResolucion}
+\end{figure}
+
+
+Para este caso, la incertidumbre extendida será de:
+
+$$I_{ext}=\frac{0.025}{100} \cdot 780 \cdot 10^{-6} + \frac{0.006}{100} \cdot 1 \cdot 10^{-3}
++ (\frac{0.001}{100} \cdot 780 \cdot 10^{-6} + \frac{0.0005}{100} \cdot 1 \cdot 10^{-3}) \cdot 3 = 0.293 \mu V$$
+$$\frac{0.293 \mu V}{10.4 \mu V/ºC}=0.028 ºC$$
+
+
+\subsection{Error Generado por Interferencia}
+
+{\bf Si sabemos que por el conductor de protección esta circulando una corriente de fugas de 20 mA de pico a 50 Hz. 
+¿Qué tipo de interferencia podemos tener en el circuito y que error provoca en la medida? Considerar los dos modos de medida del multímetro.}
+\\
+
+Podemos tener una interferencia conducida. Se trata de un sistema con equipo de medida flotante. El circuito equivalente se muestra a continuacion:
+
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{cEq}
+ \label{cEq}
+\end{figure}
+
+
+Con:
+
+$Z_s=1\Omega$
+
+$Z_{cp}=10\Omega$
+
+$Z_{d} = 10 M\Omega$
+
+$Z_{a} = Z_{b} = 100 m \Omega /m \cdot 100 m = 10 \Omega$
+\\
+
+Buscamos el valor de $Z_{BT}$:
+
+$$CMRR=20log(\frac{\left |{V_c}\right |}{\left |{V_d}\right |})=20log(\frac{\left |{Z_{BT}}\right |}{\left |{Z_{b}}\right |})$$
+
+$$Z_{BT}=37.62k\Omega$$
+
+
+Cortocircuitando la fuente de tensión, podemos realizar las siguientes aproximaciones:
+
+$$Z_{BT}>>Z_{a}+Z_s \longrightarrow V_{c2} \approx V_{BT} \longrightarrow V_{c2}//V_{BT} \approx V_{BT}$$
+
+Al ser $Z_{BT}>>Z_{cp}$, aproximadamente toda la corriente irá por la rama de abajo, por lo que podemos sustituir la fuente de $I_F$ por la fuente de tensión de $I_F \cdot Z_{cp}$ de la figura.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{cEq2}
+ \label{cEq2}
+\end{figure}
+
+Finalmente, el circuito queda como un divisor de tensión:
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{cEq3}
+ \label{cEq3}
+\end{figure}
+
+Por lo tanto, en modo rápido:
+
+$$V_d \approx \frac{I_F \cdot Z_{cp} }{Z_{cp} + Z_{BT} + Z_{b}} \cdot Z_{b} \approx \frac{I_F \cdot Z_{cp} }{Z_{BT}}\cdot Z_{b} = 63.2511 \mu V$$
+\\
+
+Y en modo lento, para un $T_{int} = 1PLC$, SMRR = 60dB = 1000. Por lo tanto:
+
+$$V_d = \frac{63.2511 \mu V}{1000}=63.2511 nV$$
+\\
+
+\subsection{ Reducción de Interferencias Mediante Promediado}
+
+{\bf Para reducir los errores debidos a la interferencia decidimos hacer varias medidas y promediarlas. Si suponemos que el valor eficaz de pico es de 0,7 $\mu$V ¿Cuántas medidas se tendrán que promediar para reducir el error debido a la interferencia a menos de 0,02ºC con un nivel de confianza del 95\% ? Considerar sólo el modo de medida rápido.}
+\\
+
+Un nivel de confianza del 95\% implica una k=2.
+\\
+
+Calculamos la temperatura correspondiente al valor eficaz de pico supuesto:
+
+$$\frac{0.7 \mu V}{10,4 \mu V/ºC}=0.0673 ºC$$
+
+Despejamos N de la ecuación:
+
+$$U=k \cdot u = k \cdot \frac{\sigma}{sqrt{N}}= 2 \cdot frac{0.0673ºC}{sqrt{N}} = 0,02ºC \longrightarrow N=(2\cdot \frac{0.0673}{0.02})^2=45.3 \longrightarrow N=46$$
+\\
+
+\subsection{Reducción de Interferencias Mediante Aislamiento del Sensor}
+
+{\bf Para reducir la interferencia de 50 Hz decidimos aislar el sensor de la estructura metálica. La impedancia de aislamiento que obtenemos puede modelarse con una capacidad de 100 pF. ¿Cuál será ahora el nivel de interferencia a la entrada del multímetro?}
+\\
+
+El circuito equivalente final, despues de realizar todas las aproximaciones, es el mismo que en el apartado 2, pero con una capacidad de 100pF en el lugar donde va la placa conductora.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{cEq4}
+ \label{cEq4}
+\end{figure}
+
+$$Z_{aislamiento} = 1/j \omega C = -j\frac{1}{2p\cdot 50 \cdot 100 \cdot 10^{-12}} = -j31.83\cdot 10^6 \Omega$$
+
+Análogamente al cálculo del apartado 2:
+$$V_d \approx \frac{I_F \cdot Z_{cp} }{Z_{cp} + Z_{BT} + Z_{b} + Z_{aislamiento}} \cdot Z_{b} \approx \frac{I_F \cdot Z_{cp} }{Z_{BT}+Z_{aislamiento}}\cdot Z_{b}$$
+
+En módulo:
+$$\left |{V_d}\right |= \frac{I_F \cdot Z_{cp} }{sqrt{Z_{BT}^2+Z_{aislamiento}^2}} \cdot Z_{b}=6.283 \cdot 10^{-8}V=62.83nV$$
+
+
+\section{Tema 2. Ejercicio 7}
+
+Se pretende diseñar un sistema de instrumentación para el control de calidad
+en una cadena de fabricación. El sistema deberá medir la ganancia y el desfase de un
+atenuador de  unos 60 dB a la frecuencia de 10 kHz. Para hacer las medidas
+disponemos de un generador de funciones y un osciloscopio.
+
+Para medir la ganancia y la fase  conectamos la señal del generador a la
+entrada del atenuador y a la entrada A del osciloscopio. La salida del atenuador se
+conecta a la entrada B del osciloscopio.
+\\
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{enunciado}
+ \label{enunciado}
+\end{figure}
+
+
+{\bf OTROS DATOS:}\\
+{\bf Especificaciones del generador de funciones:}\\
+· Impedancia de salida: 50 W\\
+· Amplitud: 10 V de pico\\
+· Frecuencia: 10 kHz\\
+· Exactitud en amplitud: 1\% Lectura\\
+· Exactitud en frecuencia: 0,01\% Lectura\\
+{\bf Especificaciones del osciloscopio}\\
+Amplificadores verticales:\\
+· Coeficientes de deflexión: 10 posiciones calibradas, desde 5 mV/DIV a 5V/DIV (secuencia 1-2-5)\\
+· 8 divisiones verticales\\
+· Resolución conversor A/D: 8 bits\\
+· exactitud en las posiciones calibradas: 3\%\\
+Base de tiempos:\\
+· Coeficientes de tiempo: 21 posiciones calibradas, desde 0.2 ms/DIV hasta 1 s/DIV (secuencia 1-2-5)\\
+· exactitud: 0.01\%\\
+Memoria de pantalla:\\
+· 200 puntos/DIV (en total 2000 bytes por canal)\\
+
+\subsection{Selección de Escalas}
+
+{\bf Si consideramos que no hay ruido, ¿cuáles son las escalas más apropiadas para
+medir la tensión de pico a la entrada y a la salida?. Expresarlo en V/DIV.}
+\\
+
+Escala canal A:
+$10 Vp = 20 Vpp \longrightarrow$  escala: 5 V/DIV
+\\
+
+Escala canal B (señal atenuada):
+$20 Vpp \cdot 10\frac{-60}{20} =20 Vpp \cdot 0.001 = 20mVpp \longrightarrow$ escala: 5mV/DIV
+\\
+
+\subsection{Incertidumbre de G}
+
+{\bf Dar la incertidumbre en la medida del módulo de G en función de las incertidumbre
+del osciloscopio ? (los errores por efecto de carga son despreciables y no se realiza
+promediado)}
+\\
+La ganancia se define como:
+$$G=\frac{V_A}{V_B}$$
+
+Por lo tanto, el error de ganancia relativo:
+$$G=\frac{\delta V_A}{V_A} + \frac{\delta V_B}{V_B}$$
+
+El error de las lecturas de tensión de cada canal del osciloscopio se corresponderá a la suma del error de calibración y 
+del error de conversión A/D:
+$$\frac{\delta V_A}{V_A}=3\% + \frac{5V/DIV \cdot 8DIVs}{2^{8bits}} \cdot \frac{1}{20Vpp}100 = 3.78\%$$
+$$\frac{\delta V_B}{V_B}=3\% + \frac{5mV/DIV \cdot 8DIVs}{2^{8bits}} \cdot \frac{1}{20mVpp}100 = 3.78\%$$
+
+Finalmente:
+$$G=3.78\%+3.78\%=7.56\%$$ 
+\\
+
+\subsection{Selección de una Base de Tiempos}
+
+{\bf Si para la medida de fase se toman en cuenta los pasos por cero con pendiente
+positiva, y la fase esperada es de  45 grados +/- 10\%, ¿ cuál es la mejor base de
+tiempos para realizar la medida ?}
+\\
+
+Sabemos que $\varphi=45º$. La mejor base de tiempos será aquella que incluya los dos pasos por cero en el peor de
+los casos ($\varphi+10\%$), y con el menor valor posible. Por lo tanto:
+
+$$\Delta T = T \frac{45º}{360º}=\frac{1}{10kHz\cdot 8}= 12.5\mu s$$ 
+
+$$\Delta T (caso-peor)= T \frac{45.45º}{360º}=\frac{45.45}{10kHz\cdot 360}= 13.75\mu s$$ 
+
+Base de Tiempos: $20\mu s \rightarrow 2\mu s/DIV$
+\\
+
+\subsection{Incertidumbre de la Fase}
+
+{\bf Dar la incertidumbre de la medida de fase en función de los errores del osciloscopio 
+(suponer la relación señal ruido infinita, que no hay componentes continuas que alteren 
+el cruce por cero de las señales y se realizan 100 promediados)}
+\\
+
+Definimos $\varphi$ como $\frac{\Delta T}{T}2\pi$. Por lo tanto:
+
+$$\frac{\delta \varphi}{\varphi}= \frac{\delta (\Delta T)}{\Delta T} + \frac{\delta T}{T}=$$
+
+$$\delta (\Delta T)= \frac{BaseTiempo}{2000muestras}+ BaseTiempo\cdot 0.01\%$$
+
+$$\frac{\delta T}{T}=0.01\%$$
+
+Finalmente:
+
+$$\frac{12\cdot 10^{-9}}{12.5\cdot 10^{-6}}100 + 0.01\%=0.106\%$$
+
+
+\subsection{Incertidumbre Debida a Ruido}
+
+{\bf Si a la salida del filtro tenemos una relación señal a ruido de 40 dB, determinar cual
+es la incertidumbre adicional por este motivo en la medida del desfase entre A y B
+con un nivel de confianza del 99\%. (suponer el ruido blanco y Gaussiano y la
+relación señal a ruido a la entrada del filtro infinita, realizar el cálculo sin
+promediado y con 100 promediados).}
+\\
+
+Si la señal tiene ruido, existirá un error de tiempo que llamaremos $\delta t_{noise}$, que se producira cuando un pico de ruido cruce el cero antes de que el valor teorico de la señal lo haga.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{ruido}
+ \label{ruido}
+\end{figure}
+
+$$\frac{\delta t_{noise}}{\Delta V}=\frac{1}{dV_B/dt}$$
+
+Derivamos la salida del atenuador:
+$$\frac{dV_B}{dt}=10mV\cdot2\pi10^4\cdot cos(2\pi10^4t)$$
+
+Evaluamos en t=0:
+$$\frac{dV_B}{dt}(t=0)=10mV\cdot2\pi10^4$$
+
+Calculamos la varianza del ruido:
+$$SNR=40dB=10^{\frac{40}{20}}=\frac{10mV}{sqrt{2}\cdot \sigma} \Rightarrow \sigma=\frac{10mV}{sqrt{2}\cdot 100}$$
+
+Hacemos el cálculo final tomando para k=2.6 para un intervalo de tolerancia de 99\%:
+$$\delta t_{noise}=\frac{\Delta V}{dV_B/dt}=\frac{k\sigma}{10mV\cdot2\pi10^4}=\frac{k10mV}{sqrt{2}\cdot 100\cdot 10mV\cdot2\pi10^4}\approx 0.3\mu s$$
+
+Finalmente, $\Delta \varphi = 1.14º$
+
+
+\end{document}

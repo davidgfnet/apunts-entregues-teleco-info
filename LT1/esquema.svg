@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="210mm"
+   height="297mm"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.47 r22583"
+   sodipodi:docname="esquema.svg"
+   inkscape:export-filename="/home/david/UPC/LT1/esquema.png"
+   inkscape:export-xdpi="300.50827"
+   inkscape:export-ydpi="300.50827">
+  <defs
+     id="defs4">
+    <inkscape:perspective
+       sodipodi:type="inkscape:persp3d"
+       inkscape:vp_x="0 : 526.18109 : 1"
+       inkscape:vp_y="0 : 1000 : 0"
+       inkscape:vp_z="744.09448 : 526.18109 : 1"
+       inkscape:persp3d-origin="372.04724 : 350.78739 : 1"
+       id="perspective10" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="2.8"
+     inkscape:cx="443.55053"
+     inkscape:cy="539.21868"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     inkscape:window-width="1280"
+     inkscape:window-height="717"
+     inkscape:window-x="0"
+     inkscape:window-y="27"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Capa 1"
+     inkscape:groupmode="layer"
+     id="layer1">
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:none"
+       id="rect2874"
+       width="36.42857"
+       height="2.8571429"
+       x="481.57144"
+       y="486.64792" />
+    <rect
+       y="486.64792"
+       x="333.57144"
+       height="2.8571429"
+       width="36.42857"
+       id="rect2870"
+       style="fill:#808080;fill-opacity:1;stroke:none" />
+    <rect
+       style="fill:#808080;fill-opacity:1;stroke:none"
+       id="rect2868"
+       width="55"
+       height="2.8571429"
+       x="213.57144"
+       y="486.64792" />
+    <g
+       id="g2825">
+      <path
+         id="rect2816"
+         d="M 147.84375 423.78125 L 147.84375 475.9375 L 173.5625 475.9375 L 173.5625 481.9375 L 147.84375 481.9375 L 147.84375 494.0625 L 215.71875 494.0625 L 215.71875 481.9375 L 190 481.9375 L 190 475.9375 L 215.71875 475.9375 L 215.71875 423.78125 L 147.84375 423.78125 z "
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
+      <rect
+         y="431.29074"
+         x="153.92857"
+         height="37.142857"
+         width="55.714287"
+         id="rect2818"
+         style="fill:#999999;fill-opacity:1;stroke:none" />
+    </g>
+    <g
+       id="g2829"
+       transform="translate(370,0)">
+      <path
+         style="fill:#1a1a1a;fill-opacity:1;stroke:none"
+         d="m 147.84375,423.78125 0,52.15625 25.71875,0 0,6 -25.71875,0 0,12.125 67.875,0 0,-12.125 -25.71875,0 0,-6 25.71875,0 0,-52.15625 -67.875,0 z"
+         id="path2831" />
+      <rect
+         style="fill:#999999;fill-opacity:1;stroke:none"
+         id="rect2833"
+         width="55.714287"
+         height="37.142857"
+         x="153.92857"
+         y="431.29074" />
+    </g>
+    <path
+       id="path2837"
+       d="m 267.12946,423.78125 0,52.15625 25.71875,0 0,6 -25.71875,0 0,12.125 67.875,0 0,-12.125 -25.71875,0 0,-6 25.71875,0 0,-52.15625 -67.875,0 z"
+       style="fill:#1a1a1a;fill-opacity:1;stroke:none" />
+    <rect
+       y="431.29074"
+       x="273.21429"
+       height="37.142857"
+       width="55.714287"
+       id="rect2839"
+       style="fill:#0044aa;fill-opacity:1;stroke:none" />
+    <rect
+       style="fill:#4d4d4d;fill-opacity:1;stroke:none"
+       id="rect2864"
+       width="115"
+       height="48.57143"
+       x="367.85712"
+       y="462.36218" />
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:none"
+       id="rect2876"
+       width="106.42857"
+       height="40.714287"
+       x="372.14282"
+       y="466.29074" />
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="375.42856"
+       y="481.50504"
+       id="text2878"><tspan
+         sodipodi:role="line"
+         id="tspan2880"
+         x="375.42856"
+         y="481.50504"
+         style="font-size:14px">CTS</tspan></text>
+    <text
+       id="text2882"
+       y="499.505"
+       x="375.42856"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px"
+         y="499.505"
+         x="375.42856"
+         sodipodi:role="line"
+         id="tspan2886">RTS</tspan></text>
+    <text
+       id="text2890"
+       y="481.50504"
+       x="447.42856"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       xml:space="preserve"><tspan
+         style="font-size:14px"
+         y="481.50504"
+         x="447.42856"
+         id="tspan2892"
+         sodipodi:role="line">CTS</tspan></text>
+    <text
+       xml:space="preserve"
+       style="font-size:40px;font-style:normal;font-weight:normal;fill:#000000;fill-opacity:1;stroke:none;font-family:Bitstream Vera Sans"
+       x="447.42856"
+       y="499.505"
+       id="text2894"><tspan
+         id="tspan2896"
+         sodipodi:role="line"
+         x="447.42856"
+         y="499.505"
+         style="font-size:14px">RTS</tspan></text>
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 405.82879,476.44896 6.31345,0 2.0203,0 18.87723,18.87723 9.65958,0"
+       id="path2902" />
+    <path
+       id="path2904"
+       d="m 405.82879,495.32619 6.31345,0 2.0203,0 18.87723,-18.87723 9.65958,0"
+       style="fill:none;stroke:#000000;stroke-width:1px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+  </g>
+</svg>

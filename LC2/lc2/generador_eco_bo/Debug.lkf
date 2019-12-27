@@ -1,0 +1,7 @@
+-z -c -heap10000 -m"./Debug/prac4.map" -o"./Debug/prac4.out" -x -i"C:/CCStudio_v3.1/C6000/rtdx/lib" -i"C:/CCStudio_v3.1/C6000/csl/lib" -i"C:/CCStudio_v3.1/C6000/xdais/lib" -i"C:/CCStudio_v3.1/C6000/bios/lib" -i"C:/CCStudio_v3.1/C6000/cgtools/lib" -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib"
+"C:\Documents and Settings\lc2125\Escritorio\generador_eco_bo\Debug\c6713dskinit.obj"
+"C:\Documents and Settings\lc2125\Escritorio\generador_eco_bo\Debug\prac4.obj"
+"C:\Documents and Settings\lc2125\Escritorio\generador_eco_bo\Debug\process.obj"
+"C:\Documents and Settings\lc2125\Escritorio\generador_eco_bo\Debug\Vectors_intr.obj"
+"C:\Documents and Settings\lc2125\Escritorio\generador_eco_bo\dsk6713bsl.lib"
+"C:\Documents and Settings\lc2125\Escritorio\generador_eco_bo\C6713dsk.cmd"

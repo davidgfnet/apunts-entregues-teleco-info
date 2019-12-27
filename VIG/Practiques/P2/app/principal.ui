@@ -1,0 +1,285 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Principal</class>
+ <widget class="QWidget" name="Principal">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>644</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Principal</string>
+  </property>
+  <layout class="QHBoxLayout" name="horizontalLayout_2">
+   <item>
+    <widget class="GLWidget" name="gLWidget" native="true">
+     <property name="sizePolicy">
+      <sizepolicy hsizetype="Expanding" vsizetype="Expanding">
+       <horstretch>0</horstretch>
+       <verstretch>0</verstretch>
+      </sizepolicy>
+     </property>
+     <property name="minimumSize">
+      <size>
+       <width>400</width>
+       <height>400</height>
+      </size>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <layout class="QVBoxLayout" name="verticalLayout">
+     <property name="sizeConstraint">
+      <enum>QLayout::SetMinimumSize</enum>
+     </property>
+     <item>
+      <widget class="QPushButton" name="buttonLoadObject">
+       <property name="text">
+        <string>Load Object</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonAutoZoom">
+       <property name="text">
+        <string>Auto zoom</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QPushButton" name="buttonResetCamera">
+       <property name="text">
+        <string>ResetCamera</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cbWireframe">
+       <property name="text">
+        <string>Wireframe</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="mostraBB">
+       <property name="text">
+        <string>Mostra Bounding Box</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="cbOrtogonal">
+       <property name="text">
+        <string>Vista ortogonal</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QCheckBox" name="checkPlantaAlcat">
+       <property name="text">
+        <string>Planta i alçat</string>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <spacer name="verticalSpacer">
+       <property name="orientation">
+        <enum>Qt::Vertical</enum>
+       </property>
+       <property name="sizeHint" stdset="0">
+        <size>
+         <width>20</width>
+         <height>40</height>
+        </size>
+       </property>
+      </spacer>
+     </item>
+     <item>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <spacer name="horizontalSpacer">
+         <property name="orientation">
+          <enum>Qt::Horizontal</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>40</width>
+           <height>20</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QPushButton" name="pushButton">
+         <property name="sizePolicy">
+          <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+           <horstretch>0</horstretch>
+           <verstretch>0</verstretch>
+          </sizepolicy>
+         </property>
+         <property name="text">
+          <string>&amp;Exit</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </item>
+    </layout>
+   </item>
+  </layout>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>GLWidget</class>
+   <extends>QWidget</extends>
+   <header>glwidget.h</header>
+   <container>1</container>
+   <slots>
+    <slot>LoadObject()</slot>
+    <slot>setCameraLight(bool)</slot>
+    <slot>LoadCharacter()</slot>
+    <slot>setWireframe(bool)</slot>
+    <slot>ResetCamera()</slot>
+    <slot>setBBRender(bool)</slot>
+    <slot>AutoZoom()</slot>
+    <slot>OrthoView(bool)</slot>
+    <slot>Toogle3D(bool)</slot>
+   </slots>
+  </customwidget>
+ </customwidgets>
+ <resources/>
+ <connections>
+  <connection>
+   <sender>buttonLoadObject</sender>
+   <signal>clicked()</signal>
+   <receiver>gLWidget</receiver>
+   <slot>LoadObject()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>633</x>
+     <y>36</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>372</x>
+     <y>172</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>pushButton</sender>
+   <signal>clicked()</signal>
+   <receiver>Principal</receiver>
+   <slot>close()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>561</x>
+     <y>391</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>643</x>
+     <y>306</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonResetCamera</sender>
+   <signal>clicked()</signal>
+   <receiver>gLWidget</receiver>
+   <slot>ResetCamera()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>226</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbWireframe</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>gLWidget</receiver>
+   <slot>setWireframe(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>223</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>mostraBB</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>gLWidget</receiver>
+   <slot>setBBRender(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>175</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>buttonAutoZoom</sender>
+   <signal>clicked()</signal>
+   <receiver>gLWidget</receiver>
+   <slot>AutoZoom()</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>56</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>cbOrtogonal</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>gLWidget</receiver>
+   <slot>OrthoView(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+  <connection>
+   <sender>checkPlantaAlcat</sender>
+   <signal>toggled(bool)</signal>
+   <receiver>gLWidget</receiver>
+   <slot>Toogle3D(bool)</slot>
+   <hints>
+    <hint type="sourcelabel">
+     <x>524</x>
+     <y>203</y>
+    </hint>
+    <hint type="destinationlabel">
+     <x>208</x>
+     <y>209</y>
+    </hint>
+   </hints>
+  </connection>
+ </connections>
+</ui>

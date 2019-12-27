@@ -1,0 +1,43 @@
+Input file: robot.rom
+Configuration file: robot.cfg
+Created by Paradigm LOCATE 6.00.143 on Fri Dec 18 13:08:12 2009
+Command line options: c:\paradigm\bin\locate.exe robot.rom 
+
+Memory Address Map for Program robot
+
+ Start     Stop      Length   Segment                Class               
+ 001000H   0010BDH   000BEH   _DATA                  DATA            
+ 0010BEH   0010BEH   00000H   _CVTSEG                DATA            
+ 0010BEH   0010BEH   00000H   _SCNSEG                DATA            
+ 0010C0H   001181H   000C2H   _BSS                   BSS             
+ 001190H   001190H   00000H   _NVRAM                 NVRAM           
+ 001190H   00119FH   00010H   _EDATA                 EDATA           
+ 0011A0H   0011A0H   00000H   _NHEAP                 STACK           
+ 0011A0H   00159FH   00400H   _STACK                 STACK           
+ 0015A0H   0015AFH   00010H   _ESTACK                STACK           
+ 0015B0H   0015B0H   00000H   _BFD                   FAR_DATA        
+ 0015B0H   0015BFH   00010H   _EFD                   ENDFAR_DATA     
+ 0015C0H   0015C0H   00000H   _BFB                   FAR_BSS         
+ 0015C0H   0015CFH   00010H   _EFB                   ENDFAR_BSS      
+ 0015D0H   0015D0H   00000H   _FARHEAP               FAR_HEAP        
+ 0015D0H   0015DFH   00010H   _EFH                   ENDFAR_HEAP     
+ 010000H   011482H   01483H   _TEXT                  CODE            
+ 011490H   01149BH   0000CH   _INIT_                 INITDATA        
+ 01149CH   01149CH   00000H   _INITEND_              INITDATA        
+ 0114A0H   0114A0H   00000H   _EXIT_                 EXITDATA        
+ 0114A0H   0114AFH   00010H   _EXITEND_              EXITDATA        
+ 0114B0H   0114B0H   00000H   _BFC                   FAR_CONST       
+ 0114B0H   0114BFH   00010H   _EFC                   ENDFAR_CONST    
+ 0114C0H   0114C0H   00000H   _RD                    ROMDATA         
+ 0114C0H   01157DH   000BEH   _DATA                  ROMDATA         
+ 01157EH   01157EH   00000H   _CVTSEG                ROMDATA         
+ 01157EH   01157EH   00000H   _SCNSEG                ROMDATA         
+ 011580H   01158FH   00010H   _ERD                   ENDROMDATA      
+ 011590H   011590H   00000H   _BRFD                  ROMFARDATA      
+ 011590H   011590H   00000H   _BFD                   ROMFARDATA      
+ 011590H   01159FH   00010H   _ERFD                  ENDROMFARDATA   
+
+Entry point:   1000:0000
+Initial stack: 0100:01A0
+
+

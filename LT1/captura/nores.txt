@@ -1,0 +1,14 @@
+(LN) 1        12:34:23.0000000    Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+(EQ) 2        12:34:23.0000000    Line Status: Info State: INFO-3   
+(EQ) 3        12:34:23.0000000    Line Status: Info State: INFO-3   
+(LN) 4        12:34:23.4553570    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=016 FCS=Good
+(EQ) 5        12:34:23.4598010    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=018 FCS=Good
+(EQ) 6        12:34:23.7330467    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 7        12:34:23.7538477    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(EQ) 8        12:34:33.4637493    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    P=1 Nr=018 FCS=Good
+(LN) 9        12:34:33.4796734    LAPD: SAPI=0 (Call Control) TEI=66 (Network assigned) Type=RR    F=1 Nr=016 FCS=Good
+(EQ) 10       12:34:33.7674862    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(LN) 11       12:34:33.7841642    LAPD: SAPI=0 (Call Control) TEI=67 (Network assigned) Type=RR    F=1 Nr=006 FCS=Good
+(LN) 12       12:34:42.6919313    Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+(EQ) 13       12:34:42.6919313    Line Status: Info State: INFO-3   
+(EQ) 14       12:34:42.6919313    Line Status: Info State: INFO-3   

@@ -1,0 +1,10 @@
+\select@language {catalan}
+\contentsline {section}{\numberline {1}Estudio Previo}{2}{section.1}
+\contentsline {subsection}{\numberline {1.1}Ejercicio 1}{2}{subsection.1.1}
+\contentsline {subsection}{\numberline {1.2}Ejercicio 2}{3}{subsection.1.2}
+\contentsline {section}{\numberline {2}Trabajo de Laboratorio}{3}{section.2}
+\contentsline {subsection}{\numberline {2.1}Rutinas de inicializaci\'on de bits de control}{3}{subsection.2.1}
+\contentsline {subsection}{\numberline {2.2}Margen de variaci\'on de frecuencia en funci\'on de $V_e$ y linealidad de VCO}{4}{subsection.2.2}
+\contentsline {subsection}{\numberline {2.3}M\'argenes de enganche y seguimiento}{7}{subsection.2.3}
+\contentsline {subsection}{\numberline {2.4}Respuesta en frecuencia}{10}{subsection.2.4}
+\contentsline {subsection}{\numberline {2.5}Distorsi\'on arm\'onica total}{11}{subsection.2.5}

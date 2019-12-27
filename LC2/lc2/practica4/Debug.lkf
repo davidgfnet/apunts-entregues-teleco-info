@@ -1,0 +1,7 @@
+-z -c -heap10000 -m"./Debug/prac4.map" -o"./Debug/prac4.out" -x -i"C:/CCStudio_v3.1/C6000/rtdx/lib" -i"C:/CCStudio_v3.1/C6000/csl/lib" -i"C:/CCStudio_v3.1/C6000/xdais/lib" -i"C:/CCStudio_v3.1/C6000/bios/lib" -i"C:/CCStudio_v3.1/C6000/cgtools/lib" -l"rts6700.lib" -l"dsk6713bsl.lib" -l"csl6713.lib"
+"H:\practica4\Debug\c6713dskinit.obj"
+"H:\practica4\Debug\prac4.obj"
+"H:\practica4\Debug\process.obj"
+"H:\practica4\Debug\Vectors_intr.obj"
+"H:\practica4\dsk6713bsl.lib"
+"H:\practica4\C6713dsk.cmd"

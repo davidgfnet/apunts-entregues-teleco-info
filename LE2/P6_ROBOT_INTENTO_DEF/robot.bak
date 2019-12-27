@@ -1,0 +1,61 @@
+/////////////////////////////////
+// LAB II
+// Robot.axe: Projecte de configuració.
+// v1.0 - (c)2001 DEE-UPC
+// Robot.c:Programa principal del projecte  
+/////////////////////////////////
+
+#include <embedded.h>
+
+#include "typedefs.h"
+#include "register.h"
+#include "timers.h"	//funcions de control dels temporitzadors
+#include "ports.h"	//funcions de control dels ports
+
+#include "mis_includes.h"
+BYTE estat_P2 = 0x00;
+BYTE status;
+BYTE reset = 1;
+
+// Motor va de 1 a 4!
+void motor_estat (BYTE num_motor, BYTE codi_estat) {
+	BYTE mascara = (0x3 << (2*(num_motor-1)));
+	estat_P2 &= ~(mascara);  // Netejem l'estat! El posem a 00
+	estat_P2 |= ( (codi_estat & 0x3) << (2*(num_motor-1)) );  // Enmascarem el codi per si de cas for incorrecte!
+
+	SetP2(estat_P2);  // Escribim el port
+}
+
+// Torna quan el robot es troba a l'origen
+void robot_inici() {
+	pinza_abrir; rot_antihorario; movh_atras; movv_arriba;
+	status = GetPT();
+	while ( (status & 0x01) != 0 ) {status = GetPT();}  // Esperem mentre no estigui a l'origen
+	parar_todo;
+}
+
+void InicialitzaLCD() {
+ 	
+}
+
+void main() {
+	IniPorts();    // Important iniciar els ports de I/O correctament
+
+   InicialitzaLCD();
+
+	InicialitzaSerie();  // Port serie!
+   parar_todo;
+	IniTimers();   // Inicial el timer
+	enable();      // Permetem interrupcions!
+
+	while (1) {
+   	if (reset == 1) {
+      	disable();  //Parem interrupcions per a fer el reset
+       	robot_inici();  ////// Comentar si veiem que la cosa no funciona, potser es queda aquí per sempre
+         reset = 0;
+         enable();
+      }
+   }
+}
+
+

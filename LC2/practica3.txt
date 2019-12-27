@@ -1,0 +1,80 @@
+
+
+2-FSK: Volem un to d'una determinada frequencia a la sortida
+la freq. varia segons el bit d'usuari.
+Com triem is i qs. Donat:
+s(t) = is(t)cos(2pfc) - qs(t)sin(2pfc)
+
+Si a la sortida volem cos(2p(fc+fm)) alehsores triem
+is(t) = cos(2pfm)    qs(t) = sin(2pfm)
+S volem cos(2p(fc-fm)) alerhores triem qs canviade de signe
+is(t) = cos(2pfm)    qs(t) =-sin(2pfm)
+
+És important notar el tema de la fase continua. Per aconseguir-ho el
+més senzill és triar frequencies per a fc+fm i fc-fm que tinguin
+periode divisor del temps de símbol, en discret que el nombre de mostres
+d'un simbol sigui multiple del nombre de mostres d'un periode de la portadora.
+
+
+void modulator_fsk(USER_BT *pUsr) {
+	double *outp = pUsr->outp, *outq = pUsr->outq;
+	int i;
+	for (i = 0; i < pUsr->nbits; i++) {
+		for (j = 0; j < pUsr->lSymb; j++)
+			*outp++ = pUsr->cos_fd[j]*pUsr->V;
+		if (pUsr->bits[i] == 0) {
+			for (j = 0; j < pUsr->lSymb; j++)
+				*outq++ = -pUsr->sin_fd[j]*pUsr->V;
+		}else{
+			for (j = 0; j < pUsr->lSymb; j++)
+				*outq++ = pUsr->sin_fd[j]*pUsr->V;
+		}
+	}
+}
+
+
+Si tenim nombre de mostres per símbol = 12, aleshores la frequencia es 1.333KHz
+Així tenim fc+1.333Khz i fc-1.333Khz
+Si fem servir fc del codi, que es 16KHz/4 = 4KHz, aixi les frequencies del FSK seran:
+5.333KHz i 2.666KHz
+
+int modulator_init(USER_BT *pUsr)
+.....
+case FSK:
+	switch(pUsr->nLevels){
+	case 2:
+		for (i = 0; i < pUsr->lSymb; i++) {
+			pUsr->cos_fd[i] = cos(2.0f*PI*((double)i)/(double)pUsr->lSymb);
+			pUsr->sin_fd[i] = sin(2.0f*PI*((double)i)/(double)pUsr->lSymb);
+		}
+		break;
+	default:
+		error = 1;
+		break;
+	}
+	break;
+
+
+Calculo de potencia de ruido...
+2-ASK: 1/2*0 + 1/2*(V^2)/2 = V^2/4
+4-ASK: 1/4*0 + 1/4*((V/3)^2)/2 + 1/4*((2*V/3)^2)/2 + 1/4*(V^2)/2 = 7/36 V^2
+8-ASK: ... = 5/28 V^2
+Tenim que SNR=Ps/Pw -> on Pw=stdev^2 -> stdev = sqrt(Ps/SNR)
+
+switch (pUsr->modulation) {
+case ASK:
+	switch (pUsr->nLevels) {
+	case 2:
+		pUsr->stdev = pUsr->V/sqrt(4.0f*l_snr);
+		break;
+	case 4:
+		pUsr->stdev = pUsr->V/sqrt((36.0f/7.0f)*l_snr);
+		break;
+	case 8:
+		pUsr->stdev = pUsr->V/sqrt((28.0f/5.0f)*l_snr);
+		break;
+	}
+	break;
+
+
+

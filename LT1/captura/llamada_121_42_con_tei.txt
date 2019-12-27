@@ -1,0 +1,24 @@
+(LN) 1        12:59:01.0000000    Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+(EQ) 2        12:59:01.0000000    Line Status: Info State: INFO-3   
+(EQ) 3        12:59:01.0000000    Line Status: Info State: INFO-3   
+(EQ) 4        12:59:07.2801263    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    P=1 Nr=005 FCS=Good
+(LN) 5        12:59:07.2919254    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    P=1 Nr=003 FCS=Good
+(EQ) 6        12:59:07.2962469    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=1 Nr=005 FCS=Good
+(LN) 7        12:59:07.3039256    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=1 Nr=003 FCS=Good
+(LN) 8        12:59:10.4914463    LAPD: SAPI=0 (Call Control) TEI=127(Broadcast) Type=UI    P=0 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2b; Type =    SETUP
+(EQ) 9        12:59:10.5386470    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=003 Nr=005 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2b; Type = ALERTing
+(LN) 10       12:59:10.5650687    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=004 FCS=Good
+(EQ) 11       12:59:13.6421728    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=004 Nr=005 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2b; Type =  CONNect
+(LN) 12       12:59:13.6654745    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=005 FCS=Good
+(LN) 13       12:59:13.6804748    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=005 Nr=005 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2b; Type = CONN ACK
+(EQ) 14       12:59:13.6869174    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=006 FCS=Good
+(EQ) 15       12:59:14.4477718    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=Info  P=0 Ns=005 Nr=006 FCS=Good
+                                  Q.931: Protocol = CallCtrl; CR = 0x2b; Type = DISConect
+(LN) 16       12:59:14.4749467    LAPD: SAPI=0 (Call Control) TEI=68 (Network assigned) Type=RR    F=0 Nr=006 FCS=Good
+(LN) 17       12:59:18.3637645    Line Status: Info State: INFO-4   PS1: Off      PS2: Off      
+(EQ) 18       12:59:18.3637645    Line Status: Info State: INFO-3   
+(EQ) 19       12:59:18.3637645    Line Status: Info State: INFO-3   

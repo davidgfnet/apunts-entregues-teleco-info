@@ -1,0 +1,322 @@
+\documentclass[10pt,a4paper,catalan]{article}
+\usepackage[latin1]{inputenc}
+%\usepackage[T1]{fontenc}
+\usepackage{babel}
+\usepackage[a4paper,left=2cm,right=2cm,top=3cm,bottom=3cm]{geometry}
+%\usepackage{amsmath}
+%\usepackage{amsfonts}
+%\usepackage{amssymb}
+\usepackage[pdftex,bookmarks=true,pdfborder={000}]{hyperref}
+\usepackage{xcolor}
+\usepackage{listings}
+%\usepackage{caption}
+\usepackage{graphicx}
+\usepackage{float}
+\usepackage{subfig}
+
+
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+
+\definecolor{gray97}{gray}{.97}
+\definecolor{gray75}{gray}{.75}
+\definecolor{gray45}{gray}{.45}
+
+\lstset{
+  frame=Ltb,
+  language=C,
+  captionpos=t,
+  tabsize=2,
+  framerule=0pt,
+  framextopmargin=5pt,
+  framexbottommargin=3pt,
+  framexleftmargin=0.4cm,
+  framesep=0pt,
+  rulesep=.4pt,
+  backgroundcolor=\color{gray97},
+  rulesepcolor=\color{black},
+  showstringspaces = false,
+  keywordstyle=\bfseries\color{blue},
+  commentstyle=\color{teal},
+  stringstyle=\ttfamily\color{red},
+  numbers=left,
+  numbersep=15pt,
+  numberstyle=\tiny,
+  numberfirstline = false,
+  breaklines=true,
+  showstringspaces=false,
+  basicstyle=\ttfamily\footnotesize,
+  emph={label}
+}
+
+\newcommand{\unit}[1]{\ensuremath{\, \mathrm{#1}}}
+
+%opening
+\title{Pr\'actica 8b: Test de un VCO y un PLL}
+\author{Dani Gabriel y Rafael G\'omez}
+\date{Junio 2011}
+
+\begin{document}
+
+\pagebreak
+
+\maketitle
+
+\tableofcontents
+
+\pagebreak
+
+\section{Estudio Previo}
+
+\subsection{Ejercicio 1}
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{previo1}
+\end{figure} 
+
+\subsection{Ejercicio 2}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=1\textwidth]{previo2}
+\end{figure}
+
+ 
+\section{Trabajo de Laboratorio}
+
+\subsection{Rutinas de inicialización de bits de control}
+
+El sistema de control del circuito a estudiar se realiza mediante una placa de adquisición de datos conectada al bus del PC. De entre los puertos de la placa, hay tres que son digitales de control (PA, PB y PC).
+
+Los bits que vamos a necesitar utilizar en nuestra aplicación son los cuatro bits de menor peso del registro PA. Tal y como se muestra en la figura \ref{fig:esquema-enunciado}, los bits PA0 y PA1 sirven para controlar la salida $V_{aux}$, el bit PA2 sirve para conectar o desconectar el emisor al circuito, y el bit PA3 sirve para conectar la entrada al puerto analógico $V_{aux}$ o a la salida DA de la placa.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{esquema-enunciado}
+ \caption{Circuito modulador y demodulador basado en VCO y PLL}
+ \label{fig:esquema-enunciado}
+\end{figure} 
+
+Para agilizar más el desarrollo de las siguientes fases de la práctica vamos a implementar un subVI que se encargue automáticamente de poner los bits de interés a nivel alto o a nivel bajo (Figura \ref{fig:SetBitbloq}). 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.3\textwidth]{writesubVIbloques}
+ \caption{Diagrama de bloques del SubVI para controlar los bits de control}
+ \label{fig:SetBitbloq}
+\end{figure} 
+
+\subsection{Margen de variación de frecuencia en función de $V_e$ y linealidad de VCO}
+
+A continuación generaremos una rutina mediante LabVIEW que mida los márgenes de variación de frecuencia y la linealidad del VCO. Para ello seguimos el siguiente esquema: 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{lin-frame0}
+ \caption{Inicializamos el registro PA con el bit 3 a 1 para leer la entrada de tensión de la placa}
+\end{figure} 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{lin-frame1}
+ \caption{Ponemos el registro el bit PA2 a 1 para desconectar el emisor del resto del circuito}
+\end{figure} 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{lin-frame2}
+ \caption{Inicializamos el registro DA que controla la entrada de tensión desde el PC}
+\end{figure} 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{lin-frame3}
+ \caption{Realizamos el barrido de tensiones en 21 pasos y calculamos el error lineal y las frecuencias mínima y máxima de los márgenes}
+\end{figure} 
+
+Para este ultimo paso realizamos un barrido de 21 pasos de tensión (de 0 a 10V) en cada uno de los cuales se ejecuta una secuencia de comandos que detallamos a continuación:
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{lin-frame30}
+ \caption{Actualizamos la entrada de tensión con el siguiente valor a partir del índice de la iteración}
+\end{figure}  
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{lin-frame31}
+ \caption{Establecemos los bits PA0 y PA1 a 0 para colocar la tensión de entrada a la salida $V_{aux}$}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{lin-frame32}
+ \caption{Medimos la salida de tensión con el multímetro}
+\end{figure}  
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{lin-frame33}
+ \caption{Establecemos los bits PA0 a 0 y PA1 a 1 para colocar la frecuencia $V_{F1}$ a la salida $V_{aux}$}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{lin-frame34}
+ \caption{Medimos con el multímetro la frecuencia a la salida}
+\end{figure} 
+
+El algoritmo del cálculo de los márgenes de variación frecuencia y el error de linealidad del VCO está implementado a la salida del bucle de barrido, como ya se ha visto más arriba. Los resultados de la ejecución de este VI pueden verse en la figura \ref{fig:bloq-linealidad}.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{errorLinealFreq2}
+ \caption{Error lineal y márgenes de variación de frecuencia en función de $V_e$}
+ \label{fig:bloq-linealidad}
+\end{figure}
+
+Vemos que el error de linealidad es de un 0.87\% y que el margen de variación de frecuencias va de 107851Hz a 241419Hz.
+
+\subsection{Márgenes de enganche y seguimiento}
+
+En este apartado diseñaremos un VI que mida las frecuencias bajas y altas de enganche y seguimiento, y evaluaremos los resultados.
+
+Los primeros tres frames de la secuencia de ejecución son exactamente iguales que los del apartado anterior, solo que en el segundo, en lugar de poner PA2 a 1, lo ponemos a 0 para conectar el circuito al emisor.
+
+El cuarto frame es el siguiente:
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{marg-frame3}
+ \caption{Barremos de menor a mayor las frecuencias para medir la frecuencia baja de enganche y alta de seguimiento}
+\end{figure}
+
+Y el quinto:
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{marg-frame4}
+ \caption{Barremos de mayor a menor las frecuencias para medir la frecuencia alta de enganche y baja de seguimiento}
+\end{figure}
+
+En estos dos últimos frames, dentro del bucle de barrido, hay otra secuencia que es exactamente igual en ambos, y que consiste en los siguientes pasos:
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{lin-frame30}
+ \caption{Actualizamos la entrada de tensión con el siguiente valor a partir del índice de la iteración}
+\end{figure}  
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{marg-frame31}
+ \caption{Establecemos los bits PA0 a 0 y PA1 a 1 para colocar la frecuencia $V_{F1}$ a la salida $V_{aux}$}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{marg-frame32}
+ \caption{Medimos la salida de frecuencia con el multímetro}
+\end{figure}  
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{marg-frame33}
+ \caption{Establecemos los bits PA0 y PA1 a 1 para colocar la frecuencia $V_{F3}$ a la salida $V_{aux}$}
+\end{figure}
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.4\textwidth]{marg-frame34}
+ \caption{Medimos con el multímetro la frecuencia a la salida}
+\end{figure} 
+
+El resultado obtenido tras la ejecución es el siguiente:
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.6\textwidth]{enganche-seguimiento}
+ \caption{Márgenes de enganche y de seguimiento del PLL}
+ \label{fig:bloq-margenes}
+\end{figure}
+
+\subsection{Respuesta en frecuencia}
+
+A continuación, nos gustaría hallar la respuesta en frecuencia que presenta el PLL, y para ello, volvemos a hacer uso de un programa implementado en la práctica 7.En este caso, sin embargo, debemos implementar dos pequeñas modificaciones en el algoritmo.
+
+Primero de todo, tal y como se muestra en la figura \ref{fig:freqframe1}, debemos de poner PA3 a 0 con el objetivo de seleccionar la entrada al puerto analógico VIN, al cual hemos conectado una amplitud pico a pico de 2.5V. Además, también debemos de poner PA2 a 0 con el objetivo de conectar el emisor al circuito.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{freqframe1}
+ \caption{Inicializamos el registro PA con los bit 2 y 3 a 0 con el objetivo de seleccionar como entrada a Vin y conectar el emisor al circuito, respectivamente}
+ \label{fig:freqframe1}
+\end{figure}
+
+Por otra parte, se ha añadido un offset ajustable, tal y como se muestra en la figura \ref{fig:freq}, en el cual durante la realización le determinamos un valor de 5V, con la finalidad de poder obtener correctamente las medidas.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{freq}
+ \caption{Diagrama de bloques modificado con el offset ajustable}
+ \label{fig:freq}
+\end{figure}
+
+Una vez implementado el programa, procedemos a su ejecución, con 20 pasos, para poder obtener así los resultados que buscábamos, tal y como se puede apreciar en la figura \ref{fig:freqbode}.
+
+\begin{figure}[H]
+ \centering
+ \subfloat[Módulo]{\includegraphics[width=0.4\textwidth]{bode}}
+ \hspace{0.5cm}
+ \subfloat[Fase]{\includegraphics[width=0.4\textwidth]{bodeFase}}
+ \caption{Diagrama de bode}
+ \label{fig:freqbode}
+\end{figure}
+
+
+
+Cabe mencionar, sin embargo, el extraño comportamiento de la fase en un punto dado, donde aparece un pico muy pronunciado en un instante muy concreto.  Estas anomalías podrían ser debidas tal vez a posibles alteraciones involuntarias del circuito durante la obtención de los resultados, o bien algún problema de implementación, debido a que el resultado esperado es que la fase decreciese hasta -180º aproximadamente.
+
+\subsection{Distorsión armónica total}
+
+Finalmente, se propone hallar la distorsión armónica utilizando como entrada una señal de 5Vpp con una frecuencia de 200Hz.
+Para ello, primeramente inicializamos el bit 2 del registro PA a 0 con el objetivo de conectar el emisor al circuito, y seguidamente, inicializamos el bit 3 del registro PA a 0 con el fin de seleccionar la entrada al puerto analógico VIN, al cual hemos conectado la señal de entrada comentada anteriormente.
+
+Para calcular entonces la distorsión armónica que se produce, partiendo del programa ''adquirir dso 3062a p6.vi´´ implementada en el transcurso de la práctica 6,  procedemos a realizar algunas modificaciones para poder encontrar los resultados que buscamos.
+
+Tal y como se muestra en la figura \ref{fig:arm-bloques}, utilizamos el ''Harmonic Analyzer.vi´´ con el objetivo de encontrar las amplitudes y frecuencias de las componentes armónicas. 
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.9\textwidth]{arm-bloques}
+ \caption{Diagrama de bloques}
+ \label{fig:arm-bloques}
+\end{figure}
+
+Además, te muestra el cálculo del porcentaje de la distorsión armónica total (ecuación \ref{eq:thd}) y de la distorsión armonica total mas ruido (ecuación \ref{eq:thdr}), mediante la ecuaciones siguientes:
+
+\begin{equation}
+ \%THD=\frac{100 \sqrt{Af_2^2+Af_3^2+...+Af_N^2}}{Af_1}
+ \label{eq:thd}
+\end{equation}
+
+\begin{equation}
+ \%THD+Noise=\frac{100 \sqrt{\sum{APS}}}{Af_1}
+ \label{eq:thdr}
+\end{equation}
+
+A continuación, procedemos a añadir una representación espectral con el objetivo de poder ver gráficamente las deltas generadas por los armónicos, en el que previamente habiamos definido que se muestren únicamente los 5 primeros armónicos.
+
+Finalmente, procedemos a su ejecución, y tal y como se puede apreciar en la figura \ref{fig:arm}, obtenemos gráficamente el espectro de las 5 primeras componentes armónicas.
+
+Sin embargo, cabe destacar un resultado que llama la atención, más concretamente, el cálculo del porcentaje de la THD, donde se puede apreciar que es bastante elevado, en torno del 80\%, lo cual indica que la potencia de los armónicos es muy elevada respecto a la potencia de la frecuencia fundamental.
+
+\begin{figure}[H]
+ \centering
+ \includegraphics[width=0.7\textwidth]{arm}
+ \caption{Diagrama de bloques}
+ \label{fig:arm}
+\end{figure}
+
+\end{document}
